@@ -1,0 +1,12 @@
+<svg id="complaint_response_status_blue" data-name="complaint response status_blue" xmlns="http://www.w3.org/2000/svg" width="14.842" height="13.915" viewBox="0 0 14.842 13.915">
+  <g id="Group_10494" data-name="Group 10494" transform="translate(4.377 2.609)">
+    <g id="Group_10493" data-name="Group 10493">
+      <path id="Path_11721" data-name="Path 11721" d="M154.044,106a3.044,3.044,0,1,0,3.044,3.044A3.048,3.048,0,0,0,154.044,106Zm-1.3,1.739a.435.435,0,1,1-.435.435A.435.435,0,0,1,152.739,107.738Zm2.842,2.916a.435.435,0,0,1-.615,0,1.306,1.306,0,0,0-1.845,0,.435.435,0,1,1-.615-.615,2.176,2.176,0,0,1,3.074,0A.435.435,0,0,1,155.581,110.654Zm-.233-2.046a.435.435,0,1,1,.435-.435A.435.435,0,0,1,155.348,108.608Z" transform="translate(-151 -105.999)" fill="#11c6ff"/>
+    </g>
+  </g>
+  <g id="Group_10496" data-name="Group 10496" transform="translate(0 0)">
+    <g id="Group_10495" data-name="Group 10495" transform="translate(0 0)">
+      <path id="Path_11722" data-name="Path 11722" d="M13.538,16H1.3A1.306,1.306,0,0,0,0,17.3V26a1.306,1.306,0,0,0,1.3,1.3H2.638v2.174a.435.435,0,0,0,.742.307L5.862,27.3h7.676a1.306,1.306,0,0,0,1.3-1.3V17.3A1.306,1.306,0,0,0,13.538,16ZM7.421,25.565a3.914,3.914,0,1,1,3.914-3.914A3.918,3.918,0,0,1,7.421,25.565Z" transform="translate(0 -15.999)" fill="#11c6ff"/>
+    </g>
+  </g>
+</svg>
