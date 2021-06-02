@@ -1,0 +1,97 @@
+header .logo {
+    width: 200px;
+}
+
+header .top-link {
+    padding: 0px 10px;
+    font-size: 0.7rem;
+    border-bottom: solid 1px #eee;
+    border-left: solid 1px #eee;
+    border-right: solid 1px #eee;
+}
+
+header a {
+    line-height: 1.45rem;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+header .top-link .input-group-text {
+    font-size: 0.7rem;
+    background-color: transparent;
+    border: 0;
+    padding: 0 10px 0 0;
+}
+
+header .btn-clr {
+    border: none;
+    margin: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+}
+
+header .ori {
+    background-color: var(--theme-o-color);
+}
+
+header .maroon {
+    background-color: var(--theme-maroon-color);
+}
+
+header .dark {
+    background-color: var(--theme-dark-color);
+}
+
+header .btn-font {
+    border: solid 1px #eee;
+    background-color: #e5e5e5;
+    font-size: 0.7rem;
+    margin: 2px;
+    border-radius: 2px;
+}
+
+header select {
+    border: 0;
+    padding: 5px 0;
+    outline: none;
+}
+
+header .navbar {
+    padding: 0;
+}
+
+.navbar {
+    padding: 0;
+    font-size: 0.85rem;
+}
+
+.navbar .dropdown-menu {
+    font-size: 0.85rem;
+    padding: 10px;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .login,
+.navbar .login:hover {
+    background-color: var(--main-color) !important;
+    color: #fff !important;
+    border-radius: 3px;
+}
+
+.navbar .nav-link {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.navbar .nav-link:hover {
+    background-color: #eee;
+    color: var(--main-color);
+}
+
+.navbar .navbar-toggler {
+    box-shadow: none;
+    font-size: 0.85rem;
+    padding: 5px 6px;
+}

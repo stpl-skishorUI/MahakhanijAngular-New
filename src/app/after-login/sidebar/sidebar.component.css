@@ -62,7 +62,7 @@ body {
 }
 
 .active {
-    color: var(--first-color)
+    color: var(--main-color)
 }
 
 @media screen and (min-width:480px) {
