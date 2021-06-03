@@ -8,6 +8,7 @@ header .top-link {
     border-bottom: solid 1px #eee;
     border-left: solid 1px #eee;
     border-right: solid 1px #eee;
+    min-height: 26px;
 }
 
 header a {
@@ -28,7 +29,7 @@ header .btn-clr {
     margin: 2px;
     width: 18px;
     height: 18px;
-    border-radius: 2px;
+    border-radius: 3px !important;
 }
 
 header .ori {
@@ -83,6 +84,8 @@ header .navbar {
     margin-left: 5px;
     padding: 5px 10px;
     border-radius: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .navbar .nav-link:hover {

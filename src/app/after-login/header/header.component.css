@@ -3,10 +3,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--container-color);
+    background-color: #FAFAFA;
     box-shadow: 0 1px 0 rgba(22, 8, 43, .1);
     padding: 0 1rem;
-    z-index: var(--z-fixed)
+    z-index: 100;
 }
 
 .header__container {
@@ -20,20 +20,9 @@
     height: 35px;
 }
 
-.header__logo {
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    display: none
-}
-
 .header__icon,
 .header__toggle {
     font-size: 1.2rem
-}
-
-.header__toggle {
-    color: var(--title-color);
-    cursor: pointer
 }
 
 @media screen and (min-width:480px) {
