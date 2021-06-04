@@ -1,2 +1,7 @@
-<app-before-login *ngIf="!isAuthenticated"></app-before-login>
-<app-after-login *ngIf="isAuthenticated"></app-after-login>
+<div *ngIf="isLoginPage">
+    <router-outlet></router-outlet>
+</div>
+<div *ngIf="!isLoginPage">
+    <app-before-login *ngIf="isBeforeLoginPage"></app-before-login>
+    <app-after-login *ngIf="!isBeforeLoginPage"></app-after-login>
+</div>

@@ -1,1 +1,50 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row" id="login">
+        <div class="col-sm-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <img src="/assets/images/OuterImages/RevenueDeptLogo.png">
+                    </div>
+                    <h5 class="card-title">Login</h5>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="txtUserName" placeholder="UserName">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Captcha Image">
+                            <button class="btn btn-secondary" type="button"><i class="fas fa-redo-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Enter Captcha">
+                    </div>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="generatelnk" data-bs-toggle="modal" data-bs-target="#SendSMSModal">Generate Password</a>
+                    </div>
+                    <div class="mb-2 text-center">
+                        <button type="button" class="btn btn-login">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="SendSMSModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h6 class="modal-title mb-3" id="SendSMSModalLabel">Generate Password</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <input text="number" placeholder="Mobile Number" class="form-control mb-3" />
+                <div class="text-center">
+                    <button type="button" class="btn btn-sm btn-login">Send SMS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
