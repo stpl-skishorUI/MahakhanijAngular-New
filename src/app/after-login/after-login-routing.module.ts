@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AfterLoginComponent } from './after-login.component'
 
 const routes: Routes = [
-  { path: '', component:AfterLoginComponent }
+    { path: '', component:AfterLoginComponent },
+    {path:'after-login',  component: AfterLoginComponent}
 ];
 
 @NgModule({
