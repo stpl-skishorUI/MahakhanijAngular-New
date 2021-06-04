@@ -4,6 +4,9 @@ import { BeforeLoginComponent } from './before-login.component';
 import { BeforeLoginRoutingModule } from './before-login-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SystemOverviewComponent } from './about/system-overview/system-overview.component';
+import { AboutMineralsComponent } from './about/about-minerals/about-minerals.component';
+import { DistrictMineralFoundationComponent } from './about/district-mineral-foundation/district-mineral-foundation.component';
 
 @NgModule({
     imports: [
@@ -13,7 +16,10 @@ import { FooterComponent } from './footer/footer.component';
     declarations: [
         BeforeLoginComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        SystemOverviewComponent,
+        AboutMineralsComponent,
+        DistrictMineralFoundationComponent
     ],
     providers: [],
     exports: [
