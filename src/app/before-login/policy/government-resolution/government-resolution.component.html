@@ -1,0 +1,166 @@
+<div class="top-image mb-4">
+  <img src="../../../../assets/images/mining.jpg" class="img-fluid" alt="System Overview Banner" />
+</div>
+<div class="row" id="sys-overview">
+  <div class="col-lg-9 mb-5">
+    <div class="content-head" id="lblGR">
+      <h4 class="mb-3">Government Resolution</h4>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="table-top">
+              <th colspan="7">
+                <div class="row">
+                  <div class="col pr-0">
+                    <select class="form-control pl-1 isEngLangSelected" id="ddlGRtype"
+                      onchange="onChangeGrTypeEng(this.value)">
+                      <option value="" selected>All GR Type</option>
+                      <option value="General">General</option>
+                      <option value="Sand">Sand</option>
+                      <option value="Revenue">Revenue</option>
+                      <option value="Fine">Fine</option>
+                    </select>
+                    <!-- <select class="form-control pl-1 isMarLangSelected" id="ddlGRtypeM" onchange="onChangeGrTypeMar(this.value)">
+                                        <option value="" selected>सर्व शा. नि. प्रकार</option>
+                                        <option value="General">सामान्य</option>
+                                        <option value="Sand">वाळू</option>
+                                        <option value="Revenue">महसूल</option>
+                                        <option value="Fine">दंड</option>
+                                    </select> -->
+                  </div>
+                  <div class="col-7">
+                    <div class="input-group">
+                      <span class="input-group-text">From</span>
+                      <input type="date" class="form-control" id="" aria-describedby="" aria-label="">
+
+                      <span class="input-group-text">To</span>
+                      <input type="date" class="form-control" id="" aria-describedby="" aria-label="">
+                    </div>
+
+                  </div>
+                  <div class="col">
+                    <input type="text" id="txtSearch" placeholder="Search" class="form-control" />
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" id="btnApply" class="btn btn-sm btn-secondary my-1">
+                      <span id="spnbtnApply" class="text-uppercase"> Apply</span>
+                    </button>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th class="text-center" style="width: 75px;" id="lbltblSrNo">Sr. No.</th>
+              <th style="width: 100px;" class="isEngLangSelected">GR Type</th>
+              <th id="lbltblDate">Date</th>
+              <th class="isEngLangSelected">Description</th>
+                  <th id="lbltblView">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">1</td>
+              <td class="isEngLangSelected">General</td>
+              <td>05/02/2021</td>
+              <td class="isEngLangSelected">Procedure for storage and transportation of Sand from Other States.</td>
+              <td>
+                  <a class="btn btn-sm btn-secondary py-0 px-2 "
+                  href="https://mahakhanij.maharashtra.gov.in/GR/Procedure_for_storage_andtransportationof_Sand_from_Other_States_05_Feburary_2021.pdf"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+                </td>
+            </tr>
+            <tr>
+              <td class="text-center">2</td>
+              <td class="isEngLangSelected">General</td>
+              <td>05/02/2021</td>
+              <td class="isEngLangSelected">Procedure for storage and transportation of Sand from Other States.</td>
+              <td>
+                  <a class="btn btn-sm btn-secondary py-0 px-2 "
+                  href="https://mahakhanij.maharashtra.gov.in/GR/Procedure_for_storage_andtransportationof_Sand_from_Other_States_05_Feburary_2021.pdf"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+                </td>
+            </tr>
+            <tr>
+              <td class="text-center">3</td>
+              <td class="isEngLangSelected">General</td>
+              <td>05/02/2021</td>
+              <td class="isEngLangSelected">Procedure for storage and transportation of Sand from Other States.</td>
+              <td>
+                  <a class="btn btn-sm btn-secondary py-0 px-2 "
+                  href="https://mahakhanij.maharashtra.gov.in/GR/Procedure_for_storage_andtransportationof_Sand_from_Other_States_05_Feburary_2021.pdf"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+                </td>
+            </tr>
+            <tr>
+              <td class="text-center">4</td>
+              <td class="isEngLangSelected">General</td>
+              <td>05/02/2021</td>
+              <td class="isEngLangSelected">Procedure for storage and transportation of Sand from Other States.</td>
+              <td>
+                  <a class="btn btn-sm btn-secondary py-0 px-2 "
+                  href="https://mahakhanij.maharashtra.gov.in/GR/Procedure_for_storage_andtransportationof_Sand_from_Other_States_05_Feburary_2021.pdf"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+                </td>
+            </tr>
+            <tr>
+              <td class="text-center">5</td>
+              <td class="isEngLangSelected">General</td>
+              <td>05/02/2021</td>
+              <td class="isEngLangSelected">Procedure for storage and transportation of Sand from Other States.</td>
+              <td>
+                  <a class="btn btn-sm btn-secondary py-0 px-2 "
+                  href="https://mahakhanij.maharashtra.gov.in/GR/Procedure_for_storage_andtransportationof_Sand_from_Other_States_05_Feburary_2021.pdf"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+                </td>
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center mb-0">
+                    <li class="page-item">
+                      <a class="page-link" routerLink="#" aria-label="Previous">
+                        <span aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link active" routerLink="#">1</a></li>
+                    <li class="page-item"><a class="page-link" routerLink="#">2</a></li>
+                    <li class="page-item"><a class="page-link" routerLink="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" routerLink="#" aria-label="Next">
+                        <span aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <div class="col-lg-3 d-none d-md-none d-lg-block">
+    <div class="card">
+      <div class="card-header ">
+        Policy
+      </div>
+      <ul class="list-group list-group-flush">
+       
+        <li class="list-group-item p-0">
+          <a routerLink="/" class="list-group-item list-group-item-action active" id="rgtlblGR">Government Resolution</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
