@@ -1,5 +1,10 @@
 #todayalerts {
     margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#todayalerts .card {
+    border: none;
 }
 
 #todayalerts .card-header {
@@ -44,16 +49,45 @@
 
 #todayalerts .alertbox h6 {
     margin-bottom: 0px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 36px;
 }
 
 #todayalerts .alertbox small {
     font-size: 0.75rem;
-    color: #777;
+    color: #aaa;
 }
 
 #todayalerts .alertbox .alertcount {
     font-weight: 600;
     color: var(--orange-color);
+    font-size: 0.9rem;
+    line-height: 36px;
+}
+
+#logoutbar .navbar-brand {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+#dash-charts .card {
+    border: none;
+}
+
+#dash-charts .input-group * {
+    font-size: 0.8rem;
+}
+
+#dash-charts .card-header,
+#dash-charts .card-header .input-group-text {
+    border: none;
+    background-color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+#dash-charts .card-header .form-control,
+#dash-charts .card-header .form-select {
+    box-shadow: none;
+    margin: 0 2px;
 }
