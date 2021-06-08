@@ -1,0 +1,59 @@
+#todayalerts {
+    margin-bottom: 15px;
+}
+
+#todayalerts .card-header {
+    background-color: transparent;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    border-bottom: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#todayalerts .card-body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#todayalerts .alertbox {
+    margin-bottom: 10px;
+    border-bottom: solid 1px #eee;
+    padding-bottom: 10px;
+}
+
+#todayalerts .alertbox .card-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#todayalerts .alertbox .d-flex {
+    margin-bottom: 5px;
+}
+
+#todayalerts .alertbox .alertimage {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 3px;
+    /* margin-top: -8px; */
+    width: 36px;
+    height: 36px;
+}
+
+#todayalerts .alertbox h6 {
+    margin-bottom: 0px;
+    font-size: 0.9rem;
+    line-height: 36px;
+}
+
+#todayalerts .alertbox small {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+#todayalerts .alertbox .alertcount {
+    font-weight: 600;
+    color: var(--orange-color);
+}

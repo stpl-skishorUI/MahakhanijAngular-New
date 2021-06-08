@@ -3,10 +3,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #FAFAFA;
     box-shadow: 0 1px 0 rgba(22, 8, 43, .1);
     padding: 0 1rem;
     z-index: 100;
+    background-color: #fff;
 }
 
 .header__container {
@@ -31,10 +31,10 @@
 
 @media screen and (min-width:480px) {
     .header {
-        padding: 0 0.5rem 0 6rem
+        padding: 0 0.5rem 0 4.8rem
     }
     .header__container {
-        height: calc(var(--header-height) + .5rem)
+        height: var(--header-height);
     }
     .header__toggle {
         display: none
@@ -43,7 +43,7 @@
         display: block
     }
     .header__img {
-        height: 40px;
+        height: 35px;
         order: 0;
     }
 }
