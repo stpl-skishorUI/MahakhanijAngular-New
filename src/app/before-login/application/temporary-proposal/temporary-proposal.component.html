@@ -1,795 +1,885 @@
 <div class="top-image mb-4">
-    <img src="../../../../assets/images/interstatemineralwebbanner.png" class="img-fluid" alt="System Overview Banner" />
-  </div>
-  <div class="row" id="sys-overview">
-    <div class="col-lg-9 mb-5">
-      <div class="content-head" id="lblNoticeHead">
-        <h4 class="mb-3">Temporary Proposal</h4>
+  <img src="../../../../assets/images/interstatemineralwebbanner.png" class="img-fluid" alt="System Overview Banner" />
+</div>
+<div class="row" id="sys-overview">
+  <div class="col-lg-9 mb-5">
+    <div class="content-head" id="lblNoticeHead">
+      <h4 class="mb-3">Temporary Proposal</h4>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row" id="OwnerDiv">
+          <div class="col-md-8">
+            <div class="form-group row">
+              <label for="OwnerType" class="col-md-4 col-form-label" id="lblOwnerTypeTP">Owner Type:</label>
+              <div class="col-md-8 pl-1">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="OwnerType" id="OwnerTypeIndividual"
+                    onclick="FN_OwnerType(true)" value="Individual" checked>
+                  <label class="form-check-label" for="OwnerTypeIndividual" id="lblIndividualTP">Individual</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="OwnerType" id="OwnerTypeOrganization"
+                    onclick="FN_OwnerType(false)" value="Organization">
+                  <label class="form-check-label" for="OwnerTypeOrganization"
+                    id="lblOrganizationTP">Organization</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="VerfiyBy" class="col-md-4 col-form-label" id="lblVerfiyByTP">Verify By:</label>
+              <div class="col-md-8">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" data-entry="VerfiyBy" onclick="FN_VerfiyBy(true)"
+                    name="VerfiyBy" id="VerfiyBy1" value="mobile" checked>
+                  <label class="form-check-label" for="VerfiyBy1" id="lblMobileTP">Mobile</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" data-entry="VerfiyBy" onclick="FN_VerfiyBy(false)"
+                    name="VerfiyBy" id="VerfiyBy2" value="pan">
+                  <label class="form-check-label" for="VerfiyBy2" id="lblPANTP1">PAN</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="row" id="OwnerDiv">
-                  <div class="col-md-8">
-                      <div class="form-group row">
-                          <label for="OwnerType" class="col-md-4 col-form-label" id="lblOwnerTypeTP">Owner Type:</label>
-                          <div class="col-md-8 pl-1">
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="OwnerType" id="OwnerTypeIndividual" onclick="FN_OwnerType(true)" value="Individual" checked>
-                                  <label class="form-check-label" for="OwnerTypeIndividual" id="lblIndividualTP">Individual</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="OwnerType" id="OwnerTypeOrganization" onclick="FN_OwnerType(false)" value="Organization">
-                                  <label class="form-check-label" for="OwnerTypeOrganization" id="lblOrganizationTP">Organization</label>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="form-group row">
-                          <label for="VerfiyBy" class="col-md-4 col-form-label" id="lblVerfiyByTP">Verify By:</label>
-                          <div class="col-md-8">
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" data-entry="VerfiyBy" onclick="FN_VerfiyBy(true)" name="VerfiyBy" id="VerfiyBy1" value="mobile" checked>
-                                  <label class="form-check-label" for="VerfiyBy1" id="lblMobileTP">Mobile</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" data-entry="VerfiyBy" onclick="FN_VerfiyBy(false)" name="VerfiyBy" id="VerfiyBy2" value="pan">
-                                  <label class="form-check-label" for="VerfiyBy2" id="lblPANTP1">PAN</label>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8" id="isMobileTP">
+        <div class="form-group row mb-0" id="btnMobileTpDiv">
+          <div class="col-md-4">
+            <label for="txtMobileTP" class="col-form-label"><span id="lblMobileNoExTP">Mobile No.</span>:<sup
+                class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
           </div>
+          <div class="col-md-8 pl-1">
+            <div class="input-group">
+              <input type="text" id="txtMobileTP" data-entry="txtMobileTP" onkeyup="MobileNoOrPanTxtChange(0)"
+                class="form-control validate-number validate-length validate-min-length" minlength="10" maxlength="10"
+                length="10" placeholder="Applicant Mobile No." autocomplete="off">
+              <button type="button" class="btn btn-success border-0 " id="btnMobileTp"
+                onclick="onVerifyExisting(0, this, 'btnMobileTp')">Search</button>
+            </div>
+            <div class="row">
+              <div class="col-md-7 pr-0">
+                <div id="btnMobileTpSuccessMsg" class="text-sucess d-none"></div>
+              </div>
+              <div class="col-md-5 pl-0 text-right">
+                <div class="btnMobileTptimerContainer d-none">Time left: <span id="btnMobileTptimer"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 hide d-none" id="isPanTP">
+        <div class="form-group row mb-0" id="btnPanTpDiv">
+          <div class="col-md-4">
+            <label for="PanTxtTP2" class="col-form-label"><span id="lblPanExTP">PAN</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup></label>
+          </div>
+          <div class="col-md-8 pl-1">
+            <div class="input-group">
+              <input type="text" class="form-control text-uppercase validate-alphanumeric"
+                onkeyup="MobileNoOrPanTxtChange(1)" data-required="bs" maxlength="10" length="10" id="PanTxtTP2"
+                onblur="onBlurPan(this)" placeholder="PAN Number" data-entry="PanTxt" />
+              <div class="input-group-append">
+                <button type="button" class="btn btn-sm btn-success border-0 mt-1" id="btnPanTp"
+                  onclick="onVerifyExisting(1, this, 'btnPanTp')">Search</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 pr-0">
+                <div id="btnPanTpSuccessMsg" class="text-sucess d-none"></div>
+              </div>
+              <div class="col-md-4 pl-0 text-right">
+                <div class="btnPanTptimerContainer d-none">Time left: <span id="btnPanTptimer"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 hide" id="isVerifyOtpTP">
+        <div class="form-group row mb-0">
+          <label for="txtOTPtp" class="col-md-5 col-form-label requiredlabel">
+            <span id="lblEnterOTPTP">Verify OTP</span>:<sup class=""><span
+                class="fa fa-asterisk small text-danger"></span></sup>
+          </label>
+          <div class="col-md-7">
+            <div class="input-group">
+              <input type="text" class="form-control validate-number validate-min-length" data-required="bs"
+                minlength="5" maxlength="5" length="5" id="txtOTPtp" placeholder="OTP" autocomplete="off">
+              <button type="button" class="btn  btn-success border-0" onclick="onVerifyOtpTp()">Verify</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row hide" id="alertExistingApplicantDiv">
+      <div class="col-md-12 mt-3">
+        <div class="alert alert-warning" role="alert" id="alertExistingApplicant"></div>
+      </div>
+    </div>
+    <div class="row mt-4 disabledUpdate" id="applicationDiv">
+      <div class="col-md-12">
+        <h6 class="form-heading fw-bold" id="lblFormHead1">Applicant Details</h6>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group mb-2 row">
+          <label for="licenseeType" class="col-md-2 col-form-label" id="lbllicenseeType">Owner Type:</label>
+          <div class="col-md-7 pl-sm-5">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" disabled="disabled" data-entry="licenseeType"
+                onclick="FN_licenseeType(true)" name="licenseeType" id="licenseeType1" value="Individual" checked>
+              <label class="form-check-label" for="licenseeType1" id="lblIndividual">Individual</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" disabled="disabled" data-entry="licenseeType"
+                onclick="FN_licenseeType(false)" name="licenseeType" id="licenseeType2" value="Organization">
+              <label class="form-check-label" for="licenseeType2" id="lblOrganization">Organization</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label class="col-md-5 col-form-label requiredlabel" for="txtName">
+            <span class="divInd" id="lblCntApplicantName">Applicant Name</span>
+            <span class="divOrg d-none" id="lblCntOrgName">Org. Name</span>
+            :<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
+          </label>
+          <div class="col-md-7">
+            <input type="text"
+              class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
+              data-required="bs" data-entry="txtName" length="200" id="txtName" placeholder="Applicant Name">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 divOrg">
+        <div class="form-group row">
+          <label class="col-md-5 col-form-label requiredlabel" for="organizationType" id="lblCntOrgType">Org. Type: <sup
+              class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+          <div class="col-md-7">
+            <select class="form-control" data-required="bs" data-entry="organizationType"
+              id="organizationType"></select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label for="txtAddressIMT" class="col-md-5 col-form-label requiredlabel">
+            <span class="divInd" id="lblCntApplicantAddress">Applicant Address</span>
+            <span class="divOrg  d-none" id="lblCntOrgAddress">Org. Address</span>
+            :<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
+          </label>
+          <div class="col-md-7">
+            <input type="text"
+              class="form-control validate-length validate-alphanumericWithSpaceAndSomeSpecialChars text-capitalize"
+              data-entry="txtAddressIMT" data-required="bs" length="200" id="txtAddressIMT"
+              placeholder="Applicant Address">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label for="txtMobile" class="col-md-5 divInd col-form-label requiredlabel"><span
+              id="lblCntApplicantMobileNo">Applicant Mobile No.</span>:<sup class=""><span
+                class="fa fa-asterisk small text-danger"></span></sup></label>
+          <label for="txtMobile" class="col-md-5 divOrg col-form-label  d-none"><span id="lblCntOrgMobileNo">Org. Mobile
+              No.</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+          <div class="col-md-7">
+            <input type="text" id="txtMobile" data-entry="txtMobile" data-required="bs"
+              class="form-control validate-number validate-length validate-min-length" minlength="10" maxlength="10"
+              length="10" placeholder="Applicant Mobile No.">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 divInd">
+        <div class="form-group row">
+          <label for="txtLandline" class="col-md-5 col-form-label"><span id="lblCntLandlineNo">Landline
+              No.</span>:</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control validate-number validate-min-length" minlength="11" maxlength="11"
+              length="11" data-entry="txtLandline" id="txtLandline" placeholder="Landline No.">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label for="txtEmail" class="col-md-5 col-form-label">
+            <span class="divInd" id="lblCntApplicantEmail">Applicant Email Id</span>
+            <span class="divOrg" id="lblCntOrgEmail  d-none">Org. Email Id</span>:
+          </label>
+          <div class="col-md-7">
+            <input type="email" class="form-control validateEmail" id="txtEmail" placeholder="Email Id">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 divOrg">
+        <div class="form-group row">
+          <label for="contactPersonName" class="col-md-5 col-form-label requiredlabel pr-0"><span
+              id="lblCntContactPersonName">Contact Person Name</span>:<sup class=""><span
+                class="fa fa-asterisk small text-danger"></span></sup></label>
+          <div class="col-md-7">
+            <input type="text" class="form-control validate-alphabets text-capitalize validate-length"
+              data-required="bs" length="50" data-entry="contactPersonName" id="contactPersonName"
+              placeholder="Contact Person Name">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 divOrg">
+        <div class="form-group row">
+          <label for="contactPersonMobileNo" class="col-md-5 col-form-label"><span
+              id="lblCntContactPersonMobileNo">Contact Person Mobile No.</span>:</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control validate-number validate-min-length" minlength="10" maxlength="10"
+              length="10" data-entry="contactPersonMobileNo" id="contactPersonMobileNo"
+              placeholder="Contact Person Contact No.">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" id="ownerDistrictIdDiv">
+        <div class="form-group row">
+          <label for="ddlState" class="col-md-5 col-form-label requiredlabel">
+            <span class="divInd" id="lblApplicantDistrictTP">Applicant District</span>
+            <span class="divOrg" id="lblOrgDistrictTP  d-none">Org. District</span>:<sup class=""><span
+                class="fa fa-asterisk small text-danger"></span></sup>
+          </label>
+          <div class="col-md-7">
+            <select class="form-control selectpicker" data-required="bs" data-entry="ownerDistrictId"
+              id="ownerDistrictId">
+              <option value="">Select District</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <table class="table table-borderless">
+          <thead class="table-dark">
+            <tr>
+              <th>Document Name</th>
+              <th>Document Number</th>
+              <th></th>
+              <th style="width: 80px;" class="text-left"></th>
+            </tr>
+          </thead>
+          <tbody class="border-1">
+            <tr class="form-group">
+              <td>
+                <label for="PanTxt" class="requiredlabel m-0">
+                  <span id="lblPAN">PAN</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup>
+                  <span style="font-size: 10px;" class="text-danger ">(PAN no. & PAN document mandatory)</span>
+                </label>
+              </td>
+              <td>
+                <input type="text" class="form-control text-uppercase validate-alphanumeric" data-required="bs"
+                  maxlength="10" length="10" id="PanTxt" onblur="onBlurPan(this)" placeholder="PAN Number"
+                  data-entry="PanTxt" />
+              </td>
+              <td>
+                <div class="input-file-container">
+                  <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="Pan"
+                    data-docutype="Pan" data-docutypeid="1" />
+                </div>
+              </td>
+              <td class="text-left px-0">
+                <a href="" target="_blank" id="PanPath" class="form-text links text-muted mb-2 hide w-100"><i
+                    class="fa fa-file-alt text-primary"></i></a>
+                <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                  style="height: 25px; width: 25px;" id="PanImg" alt="Document Uploaded Successfully"
+                  title="Document Uploaded Successfully" />
+                <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                  style="height: 25px; width: 25px; cursor: pointer;" id="PanImgDelete" alt="Delete Uploaded Document"
+                  title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('Pan')" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="GSTTxt" class="m-0"><span id="lblGST">GST</span>:</label>
+              </td>
+              <td>
+                <input type="text" class="form-control validate-alphanumeric  validate-gst" placeholder="GST Number"
+                  maxlength="15" id="GSTTxt" data-entry="GSTTxt" />
+              </td>
+              <td>
+                <div class="input-file-container">
+                  <input type="file" class="form-control  uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="GST"
+                    data-docutypeid="3" data-docutype="GST" />
+                </div>
+              </td>
+              <td class="text-left px-0">
+                <a href="" target="_blank" id="GSTPath" class="form-text links text-muted mb-2 hide w-100"><i
+                    class="fa fa-file-alt  text-primary"></i></a>
+                <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                  style="height: 25px; width: 25px;" id="GSTImg" alt="Document Uploaded Successfully"
+                  title="Document Uploaded Successfully" />
+                <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                  style="height: 25px; width: 25px; cursor: pointer;" id="GSTImgDelete" alt="Delete Uploaded Document"
+                  title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('GST')" />
+              </td>
+            </tr>
+            <tr class="divOrg">
+              <td>
+                <label for="IncorporationCertificateTxt" class="m-0"><span
+                    id="lblCntIncorporationCertificate">Incorporation Certificate</span>:</label>
+              </td>
+              <td>
+                <input type="date" class="form-control" id="IncorporationCertificateTxt" style=""
+                  placeholder="Incorporation Date" data-entry="IncorporationCertificateTxt" />
+              </td>
+              <td>
+                <div class="input-file-container">
+                  <input type="file" class="form-control  uploadDoc" accept=".jpg,.jpeg,.png,.pdf"
+                    id="IncorporationCertificate" data-docutypeid="4" data-docutype="IncorporationCertificate" />
+                </div>
+              </td>
+              <td class="text-left px-0">
+                <a href="" target="_blank" id="IncorporationCertificatePath"
+                  class="form-text hide links text-muted mb-2  w-100"><i class="fa fa-file-alt  text-primary"></i></a>
+                <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                  style="height: 25px; width: 25px;" id="IncorporationCertificateImg"
+                  alt="Document Uploaded Successfully" title="Document Uploaded Successfully" />
+                <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                  style="height: 25px; width: 25px; cursor: pointer;" id="IncorporationCertificateImgDelete"
+                  alt="Delete Uploaded Document" title="Delete Uploaded Document"
+                  onclick="onClickDeleteUploadedDoc('IncorporationCertificate')" />
+              </td>
+            </tr>
+            <tr class="divOrg" id="partnershipDeedDiv">
+              <td>
+                <label for="PartnershipDeedTxt" class="m-0"><span id="lblCntPartnershipDeedCertificate">Partnership Deed
+                    Certificate</span>:</label>
+              </td>
+              <td>
+                <input type="text" class="form-control validate-number validate-min-length" minlength="10"
+                  maxlength="15" id="PartnershipDeedTxt" placeholder="Partnership Deed Certificate"
+                  data-entry="PartnershipDeedTxt" />
+              </td>
+              <td>
+                <div class="input-file-container">
+                  <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="PartnershipDeed"
+                    data-docutypeid="6" data-docutype="PartnershipDeed" />
+                </div>
+              </td>
+              <td class="text-left px-0">
+                <a href="" target="_blank" id="PartnershipDeedPath"
+                  class="form-text links hide text-muted mb-2  w-100"><i class="fa fa-file-alt  text-primary"></i></a>
+                <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                  style="height: 25px; width: 25px;" id="PartnershipDeedImg" alt="Document Uploaded Successfully"
+                  title="Document Uploaded Successfully" />
+                <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                  style="height: 25px; width: 25px; cursor: pointer;" id="PartnershipDeedImgDelete"
+                  alt="Delete Uploaded Document" title="Delete Uploaded Document"
+                  onclick="onClickDeleteUploadedDoc('PartnershipDeed')" />
+              </td>
+            </tr>
+            <tr class="divOrg">
+              <td>
+                <label for="ShopActTxt" class="m-0"><span id="lblCntShopActLocalBodyCertificate">Shop Act/ Local Body
+                    Certificate</span>:</label>
+              </td>
+              <td>
+                <input type="text" class="form-control validate-number validate-min-length" minlength="10"
+                  maxlength="15" id="ShopActTxt" placeholder="Shop Act/ Local Body Certificate"
+                  data-entry="ShopActTxt" />
+              </td>
+              <td>
+                <div class="input-file-container">
+                  <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="ShopAct"
+                    data-docutypeid="5" data-docutype="ShopAct" />
+                </div>
+              </td>
+              <td class="text-left px-0">
+                <a href="" target="_blank" id="ShopActPath" class="form-text links text-muted hide mb-2  w-100"><i
+                    class="fa fa-file-alt  text-primary"></i></a>
+                <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                  style="height: 25px; width: 25px;" id="ShopActImg" alt="Document Uploaded Successfully"
+                  title="Document Uploaded Successfully" />
+                <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                  style="height: 25px; width: 25px; cursor: pointer;" id="ShopActImgDelete"
+                  alt="Delete Uploaded Document" title="Delete Uploaded Document"
+                  onclick="onClickDeleteUploadedDoc('ShopAct')" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row sectionDiv">
+        <div class="col-md-12 mt-3">
+          <h6 class="form-heading fw-bold" id="lblTPApplicationDetails">Application Details</h6>
+        </div>
       </div>
       <div class="row">
-          <div class="col-md-8" id="isMobileTP">
-              <div class="form-group row mb-0" id="btnMobileTpDiv">
-                  <div class="col-md-4">
-                      <label for="txtMobileTP" class="col-form-label"><span id="lblMobileNoExTP">Mobile No.</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
-                  </div>
-                  <div class="col-md-8 pl-1">
-                      <div class="input-group">
-                          <input type="text" id="txtMobileTP" data-entry="txtMobileTP" onkeyup="MobileNoOrPanTxtChange(0)" class="form-control validate-number validate-length validate-min-length" minlength="10" maxlength="10" length="10" placeholder="Applicant Mobile No." autocomplete="off">
-                              <button type="button" class="btn btn-success border-0 " id="btnMobileTp" onclick="onVerifyExisting(0, this, 'btnMobileTp')">Search</button>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-7 pr-0">
-                              <div id="btnMobileTpSuccessMsg" class="text-sucess d-none"></div>
-                          </div>
-                          <div class="col-md-5 pl-0 text-right">
-                              <div class="btnMobileTptimerContainer d-none" >Time left: <span id="btnMobileTptimer"></span></div>
-                          </div>
-                      </div>
-                  </div>
+        <div class="col-md-10">
+          <div class="row">
+            <label for="ApplicationType" class="col-md-3 col-form-label" id="lblTPApplicationType">Application
+              Type:</label>
+            <div class="col-md-9">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="ApplicationType"
+                  onclick="FN_ApplicationType(true)" name="ApplicationType" id="TemporaryPlotProposal"
+                  value="TemporaryPlotProposal" checked>
+                <label class="form-check-label" for="TemporaryPlotProposal" id="lblTemporaryPlotProposal">Temporary Plot
+                  Proposal</label>
               </div>
-          </div>
-          <div class="col-md-8 hide d-none" id="isPanTP">
-              <div class="form-group row mb-0" id="btnPanTpDiv">
-                  <div class="col-md-4">
-                      <label for="PanTxtTP2" class="col-form-label"><span id="lblPanExTP">PAN</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
-                  </div>
-                  <div class="col-md-8 pl-1">
-                      <div class="input-group">
-                          <input type="text" class="form-control text-uppercase validate-alphanumeric" onkeyup="MobileNoOrPanTxtChange(1)" data-required="bs" maxlength="10" length="10" id="PanTxtTP2" onblur="onBlurPan(this)" placeholder="PAN Number" data-entry="PanTxt" />
-                          <div class="input-group-append">
-                              <button type="button" class="btn btn-sm btn-success border-0 mt-1" id="btnPanTp" onclick="onVerifyExisting(1, this, 'btnPanTp')">Search</button>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-8 pr-0">
-                              <div id="btnPanTpSuccessMsg"  class="text-sucess d-none"></div>
-                          </div>
-                          <div class="col-md-4 pl-0 text-right">
-                              <div class="btnPanTptimerContainer d-none" >Time left: <span id="btnPanTptimer"></span></div>
-                          </div>
-                      </div>
-                  </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="ApplicationType"
+                  onclick="FN_ApplicationType(false)" name="ApplicationType" id="ProjectSelfConsumption"
+                  value="ProjectSelfConsumption">
+                <label class="form-check-label" for="ProjectSelfConsumption" id="lblProjectSelfConsumption">Project Self
+                  Consumption</label>
               </div>
+            </div>
           </div>
-          <div class="col-md-4 hide" id="isVerifyOtpTP">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <div class="col-md-5">
+              <label for="ddlLeaseType" class="col-form-label requiredlabel"><span id="lblLeaseTypeTP">Lease
+                  Type</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+            </div>
+            <div class="col-md-7">
+              <select class="form-control disabledUpdate" id="ddlLeaseType" data-required="bs" [disabled]="true"
+                formControlName="ddlLeaseType">
+                <option value="Temporary" selected="selected">Temporary</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <div class="col-md-5 ">
+              <label for="ddlProposalLevel" class="col-form-label requiredlabel"><span id="lblProposalLevelTP">Proposal
+                  Level</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+            </div>
+            <div class="col-md-7">
+              <select class="form-control" id="ddlProposalLevel" data-required="bs" formControlName="ddlProposalLevel">
+                <option value="" selected="selected">Proposal Level</option>
+                <option value="District">District</option>
+                <option value="SDO">Sub-Division</option>
+                <option value="Tahsil">Tehsil</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 divProjectSelfConsumption sectionDiv">
+        <div class="col-md-12 mt-3">
+          <h6 class="form-heading fw-bold" id="lblTPProjectDetailsTP">Project Details</h6>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group row">
+            <label for="ProjectType" class="col-md-2 col-form-label" id="lblTPProjectTypeTP">Project
+              Type:</label>
+            <div class="col-md-7 pl-sm-5">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="ProjectType"
+                  onclick="FN_ProjectType(true)" name="ProjectType" id="Private" value="Private" checked>
+                <label class="form-check-label" for="Private" id="lblPrivate">Private</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="ProjectType"
+                  onclick="FN_ProjectType(false)" name="ProjectType" id="Government" value="Government">
+                <label class="form-check-label" for="Government" id="lblGovernment">Government</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 divGovernment">
+          <div class="form-group row">
+            <label class="col-md-5  col-form-label requiredlabel" for="txtDepartment">
+              <span id="lblDepartmentTP">Department</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup>
+            </label>
+            <div class="col-md-7">
+              <input type="text"
+                class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
+                data-required="bs" formControlName="txtDepartment" length="200" id="txtDepartment"
+                placeholder="Department Name">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 divGovernment">
+          <div class="form-group row">
+            <label class="col-md-5  col-form-label requiredlabel" for="txtOffice">
+              <span id="lblOfficeTP">Office</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup>
+            </label>
+            <div class="col-md-7">
+              <input type="text"
+                class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
+                data-required="bs" formControlName="txtOffice" length="200" id="txtOffice" placeholder="Office Name">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 divGovernment">
+          <table class="table table-borderless mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th>Work Order Number</th>
+                <th></th>
+                <th class="text-left"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="form-group">
+                <td>
+                  <input type="text"
+                    class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
+                    minlength="12" maxlength="12" id="WorkOrderTxt" placeholder="WorkOrder Number"
+                    formControlName="WorkOrderTxt" />
+
+                </td>
+                <td>
+                  <div class="input-file-container">
+                    <input type="file" class="form-control uploadDocNoc" accept=".jpg,.jpeg,.png,.pdf" id="WorkOrder"
+                      data-docutype="WorkOrder" />
+                  </div>
+                </td>
+                <td class="text-left px-1">
+                  <a href="" target="_blank" id="WorkOrderPath" class="ml-1 links text-muted hide w-100"><i
+                      class="fa fa-file-alt  text-primary fa-file-alt"></i></a>
+                  <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-2"
+                    style="height: 25px; width: 25px;" id="WorkOrderImg" alt="WorkOrder card" />
+                  <img src="../../../../assets/images/close_upload_file.svg" class="uploadDocBtn"
+                    style="height: 25px; width: 25px;" id="WorkOrderImgDelete"
+                    onclick="onClickDeleteUploadedWorkOrderDoc()" alt="Delete file" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-md-5  col-form-label requiredlabel" for="txtProjectCode">
+              <span id="lblProjectCodeTP">Project Code</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup>
+            </label>
+            <div class="col-md-7">
+              <input type="text"
+                class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
+                data-required="bs" formControlName="txtProjectCode" length="200" id="txtProjectCode"
+                placeholder="Project Code">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-md-5 col-form-label requiredlabel requiredlabel" for="txtProjectName">
+              <span id="lblProjectNameTP">Project Name</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup>
+            </label>
+            <div class="col-md-7">
+              <input type="text"
+                class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
+                data-required="bs" formControlName="txtProjectName" length="200" id="txtProjectName"
+                placeholder="Project Name">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group row">
+            <label for="txtAddress" class="col-sm-3 col-form-label requiredlabel"
+              style="flex: 0 0 22.666667%; max-width: 22.666667%;"><span id="lblAddressProjectTP">Address</span>:<sup
+                class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+            <div class="col-sm-9 px-0">
+              <input class="form-control validate-alphanumericWithSpace" id="txtAddress" data-required="bs"
+                formControlName="txtAddress" placeholder="Address" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label for="txtProjectLatitude" class="col-sm-5 col-form-label requiredlabel"><span
+                id="lblProjectLocationLatitudeTP">Project Location (Latitude)</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup></label>
+            <div class="col-sm-7">
+              <input type="text" placeholder="99.9999" class="form-control validate-latlong" length="7"
+                id="ProjectLatitude" data-required="bs" formControlName="ProjectLatitude" autocomplete="off">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label for="txtProjectLongitude" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                id="lblProjectLocationLongitudeTP">Project Location (Longitude)</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup></label>
+            <div class="col-sm-6">
+              <input type="text" placeholder="99.9999" class="form-control validate-latlong" length="7"
+                id="ProjectLongitude" data-required="bs" formControlName="ProjectLongitude" autocomplete="off">
+            </div>
+            <div class="col-md-1 px-0 d-flex align-items-start">
+              <button type="button" class="btn btn-link p-0" data-toggle="modal" data-target="#ProjectDetailsModal">
+                <img src="../../../../assets/images/mapPin.svg" style="height: 25px; width: 25px;" alt="LatLong" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label for="IsAppliedForZeroRoyaltyScheme" class="col-md-5 col-form-label"><span
+                id="lblZeroRoyaltySchemeTP">Zero Royalty Scheme</span></label>
+            <div class="col-md-7">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="IsAppliedForZeroRoyaltyScheme"
+                  onclick="FN_IsAppliedForZeroRoyaltyScheme(false)" name="IsAppliedForZeroRoyaltyScheme"
+                  id="IsAppliedForZeroRoyaltySchemeNo" value="No" checked>
+                <label class="form-check-label" for="IsAppliedForZeroRoyaltySchemeNo"
+                  id="lblIsAppliedForZeroRoyaltySchemeNo">No</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="IsAppliedForZeroRoyaltyScheme"
+                  onclick="FN_IsAppliedForZeroRoyaltyScheme(true)" name="IsAppliedForZeroRoyaltyScheme"
+                  id="IsAppliedForZeroRoyaltySchemeYes" value="Yes">
+                <label class="form-check-label" for="IsAppliedForZeroRoyaltySchemeYes"
+                  id="lblIsAppliedForZeroRoyaltySchemeYes">Yes</label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 divIsAppliedForZeroRoyaltySchemeYes hide">
+          <div class="form-group row">
+            <label for="ddlSchemeType" class="col-md-5 col-form-label requiredlabel"><span id="lblTPSchemeType">Scheme
+                Type</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+            <div class="col-md-7">
+              <select class="form-control selectpicker" data-required="bs" formControlName="ddlSchemeType"
+                id="ddlSchemeType">
+                <option value="">Scheme Type</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 sectionDiv">
+        <div class="col-md-12 mt-3">
+          <h6 class="form-heading fw-bold" id="lblPlotDetailsTP">Plot Details</h6>
+        </div>
+        <div class="col-md-12 mb-2">
+          <div class="row">
+            <div class="col-md-6">
               <div class="form-group row mb-0">
-                  <label for="txtOTPtp" class="col-md-5 col-form-label requiredlabel">
-                      <span id="lblEnterOTPTP">Verify OTP</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
-                  </label>
-                  <div class="col-md-7">
-                      <div class="input-group">
-                          <input type="text" class="form-control validate-number validate-min-length" data-required="bs" minlength="5" maxlength="5" length="5" id="txtOTPtp" placeholder="OTP" autocomplete="off">
-                          <button type="button" class="btn  btn-success border-0" onclick="onVerifyOtpTp()">Verify</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row hide" id="alertExistingApplicantDiv">
-          <div class="col-md-12 mt-3">
-              <div class="alert alert-warning" role="alert" id="alertExistingApplicant"></div>
-          </div>
-      </div>
-      <div class="row mt-4 disabledUpdate" id="applicationDiv">
-          <div class="col-md-12">
-              <h6 class="form-heading fw-bold" id="lblFormHead1">Applicant Details</h6>
-          </div>
-          <div class="col-md-12">
-              <div class="form-group mb-2 row">
-                  <label for="licenseeType" class="col-md-2 col-form-label" id="lbllicenseeType">Owner Type:</label>
-                  <div class="col-md-7 pl-sm-5">
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" disabled="disabled" data-entry="licenseeType" onclick="FN_licenseeType(true)" name="licenseeType" id="licenseeType1" value="Individual" checked>
-                          <label class="form-check-label" for="licenseeType1" id="lblIndividual">Individual</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" disabled="disabled" data-entry="licenseeType" onclick="FN_licenseeType(false)" name="licenseeType" id="licenseeType2" value="Organization">
-                          <label class="form-check-label" for="licenseeType2" id="lblOrganization">Organization</label>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="form-group row">
-                  <label class="col-md-5 col-form-label requiredlabel" for="txtName">
-                      <span class="divInd" id="lblCntApplicantName">Applicant Name</span>
-                      <span class="divOrg d-none" id="lblCntOrgName">Org. Name</span>
-                      :<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
-                  </label>
-                  <div class="col-md-7">
-                      <input type="text" class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length" data-required="bs" data-entry="txtName" length="200" id="txtName" placeholder="Applicant Name">
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6 divOrg">
-              <div class="form-group row">
-                  <label class="col-md-5 col-form-label requiredlabel" for="organizationType" id="lblCntOrgType">Org. Type: <sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
-                  <div class="col-md-7">
-                      <select class="form-control" data-required="bs" data-entry="organizationType" id="organizationType"></select>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="form-group row">
-                  <label for="txtAddressIMT" class="col-md-5 col-form-label requiredlabel">
-                      <span class="divInd" id="lblCntApplicantAddress">Applicant Address</span>
-                      <span class="divOrg  d-none" id="lblCntOrgAddress">Org. Address</span>
-                      :<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
-                  </label>
-                  <div class="col-md-7">
-                      <input type="text" class="form-control validate-length validate-alphanumericWithSpaceAndSomeSpecialChars text-capitalize" data-entry="txtAddressIMT" data-required="bs" length="200" id="txtAddressIMT" placeholder="Applicant Address">
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="form-group row">
-                  <label for="txtMobile" class="col-md-5 divInd col-form-label requiredlabel"><span id="lblCntApplicantMobileNo">Applicant Mobile No.</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
-                  <label for="txtMobile" class="col-md-5 divOrg col-form-label  d-none"><span id="lblCntOrgMobileNo">Org. Mobile No.</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
-                  <div class="col-md-7">
-                      <input type="text" id="txtMobile" data-entry="txtMobile" data-required="bs" class="form-control validate-number validate-length validate-min-length" minlength="10" maxlength="10" length="10" placeholder="Applicant Mobile No.">
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6 divInd">
-              <div class="form-group row">
-                  <label for="txtLandline" class="col-md-5 col-form-label"><span id="lblCntLandlineNo">Landline No.</span>:</label>
-                  <div class="col-md-7">
-                      <input type="text" class="form-control validate-number validate-min-length" minlength="11" maxlength="11" length="11" data-entry="txtLandline" id="txtLandline" placeholder="Landline No.">
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="form-group row">
-                  <label for="txtEmail" class="col-md-5 col-form-label">
-                      <span class="divInd" id="lblCntApplicantEmail">Applicant Email Id</span>
-                      <span class="divOrg" id="lblCntOrgEmail  d-none">Org. Email Id</span>:
-                  </label>
-                  <div class="col-md-7">
-                      <input type="email" class="form-control validateEmail" id="txtEmail" placeholder="Email Id">
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6 divOrg">
-              <div class="form-group row">
-                  <label for="contactPersonName" class="col-md-5 col-form-label requiredlabel pr-0"><span id="lblCntContactPersonName">Contact Person Name</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
-                  <div class="col-md-7">
-                      <input type="text" class="form-control validate-alphabets text-capitalize validate-length" data-required="bs" length="50" data-entry="contactPersonName" id="contactPersonName" placeholder="Contact Person Name">
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6 divOrg">
-              <div class="form-group row">
-                  <label for="contactPersonMobileNo" class="col-md-5 col-form-label"><span id="lblCntContactPersonMobileNo">Contact Person Mobile No.</span>:</label>
-                  <div class="col-md-7">
-                      <input type="text" class="form-control validate-number validate-min-length" minlength="10" maxlength="10" length="10" data-entry="contactPersonMobileNo" id="contactPersonMobileNo" placeholder="Contact Person Contact No.">
-                  </div>
-              </div>
-          </div>
-          
-          <div class="col-md-6" id="ownerDistrictIdDiv">
-              <div class="form-group row">
-                  <label for="ddlState" class="col-md-5 col-form-label requiredlabel">
-                      <span class="divInd" id="lblApplicantDistrictTP">Applicant District</span>
-                      <span class="divOrg" id="lblOrgDistrictTP  d-none">Org. District</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
-                  </label>
-                  <div class="col-md-7">
-                      <select class="form-control selectpicker" data-required="bs" data-entry="ownerDistrictId" id="ownerDistrictId">
-                          <option value="">Select District</option>
-                      </select>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-12">
-              <table class="table table-borderless">
-                  <thead class="table-dark">
-                      <tr>
-                          <th >Document Name</th>
-                          <th >Document Number</th>
-                          <th ></th>
-                          <th style="width: 80px;" class="text-left"></th>
-                      </tr>
-                  </thead>
-                  <tbody class="border-1">
-                      <tr class="form-group">
-                          <td>
-                              <label for="PanTxt" class="requiredlabel m-0">
-                                  <span id="lblPAN">PAN</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
-                                  <span style="font-size: 10px;" class="text-danger ">(PAN no. & PAN document mandatory)</span>
-                              </label>
-                          </td>
-                          <td>
-                              <input type="text" class="form-control text-uppercase validate-alphanumeric" data-required="bs" maxlength="10" length="10" id="PanTxt" onblur="onBlurPan(this)" placeholder="PAN Number" data-entry="PanTxt" />
-                          </td>
-                          <td>
-                              <div class="input-file-container">
-                                  <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="Pan" data-docutype="Pan" data-docutypeid="1" />
-                              </div>
-                          </td>
-                          <td class="text-left px-0">
-                              <a href="" target="_blank" id="PanPath" class="form-text links text-muted mb-2 hide w-100"><i class="fa fa-file-alt text-primary"></i></a>
-                              <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1" style="height: 25px; width: 25px;"
-                                  id="PanImg" alt="Document Uploaded Successfully" title="Document Uploaded Successfully" />
-                              <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg" style="height: 25px; width: 25px; cursor: pointer;"
-                                  id="PanImgDelete" alt="Delete Uploaded Document" title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('Pan')" />
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <label for="GSTTxt" class="m-0"><span id="lblGST">GST</span>:</label>
-                          </td>
-                          <td>
-                              <input type="text" class="form-control validate-alphanumeric  validate-gst" placeholder="GST Number" maxlength="15" id="GSTTxt" data-entry="GSTTxt" />
-                          </td>
-                          <td>
-                              <div class="input-file-container">
-                                  <input type="file" class="form-control  uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="GST" data-docutypeid="3" data-docutype="GST" />
-                              </div>
-                          </td>
-                          <td class="text-left px-0">
-                              <a href="" target="_blank" id="GSTPath" class="form-text links text-muted mb-2 hide w-100"><i class="fa fa-file-alt  text-primary"></i></a>
-                              <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1" style="height: 25px; width: 25px;"
-                                  id="GSTImg" alt="Document Uploaded Successfully" title="Document Uploaded Successfully" />
-                              <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg" style="height: 25px; width: 25px; cursor: pointer;"
-                                  id="GSTImgDelete" alt="Delete Uploaded Document" title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('GST')" />
-                          </td>
-                      </tr>
-                      <tr class="divOrg">
-                          <td>
-                              <label for="IncorporationCertificateTxt" class="m-0"><span id="lblCntIncorporationCertificate">Incorporation Certificate</span>:</label>
-                          </td>
-                          <td>
-                              <input type="date" class="form-control" id="IncorporationCertificateTxt" style="" placeholder="Incorporation Date" data-entry="IncorporationCertificateTxt" />
-                          </td>
-                          <td>
-                              <div class="input-file-container">
-                                  <input type="file" class="form-control  uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="IncorporationCertificate" data-docutypeid="4" data-docutype="IncorporationCertificate" />
-                              </div>
-                          </td>
-                          <td class="text-left px-0">
-                              <a href="" target="_blank" id="IncorporationCertificatePath" class="form-text hide links text-muted mb-2  w-100"><i class="fa fa-file-alt  text-primary"></i></a>
-                              <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1" style="height: 25px; width: 25px;"
-                                  id="IncorporationCertificateImg" alt="Document Uploaded Successfully" title="Document Uploaded Successfully" />
-                              <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg" style="height: 25px; width: 25px; cursor: pointer;"
-                                  id="IncorporationCertificateImgDelete" alt="Delete Uploaded Document" title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('IncorporationCertificate')" />
-                          </td>
-                      </tr>
-                      <tr class="divOrg" id="partnershipDeedDiv">
-                          <td>
-                              <label for="PartnershipDeedTxt" class="m-0"><span id="lblCntPartnershipDeedCertificate">Partnership Deed Certificate</span>:</label>
-                          </td>
-                          <td>
-                              <input type="text" class="form-control validate-number validate-min-length" minlength="10" maxlength="15" id="PartnershipDeedTxt" placeholder="Partnership Deed Certificate" data-entry="PartnershipDeedTxt" />
-                          </td>
-                          <td>
-                              <div class="input-file-container">
-                                  <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="PartnershipDeed" data-docutypeid="6" data-docutype="PartnershipDeed" />
-                              </div>
-                          </td>
-                          <td class="text-left px-0">
-                              <a href="" target="_blank" id="PartnershipDeedPath" class="form-text links hide text-muted mb-2  w-100"><i class="fa fa-file-alt  text-primary"></i></a>
-                              <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1" style="height: 25px; width: 25px;"
-                                  id="PartnershipDeedImg" alt="Document Uploaded Successfully" title="Document Uploaded Successfully" />
-                              <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg" style="height: 25px; width: 25px; cursor: pointer;"
-                                  id="PartnershipDeedImgDelete" alt="Delete Uploaded Document" title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('PartnershipDeed')" />
-                          </td>
-                      </tr>
-                      <tr class="divOrg">
-                          <td>
-                              <label for="ShopActTxt" class="m-0"><span id="lblCntShopActLocalBodyCertificate">Shop Act/ Local Body Certificate</span>:</label>
-                          </td>
-                          <td>
-                              <input type="text" class="form-control validate-number validate-min-length" minlength="10" maxlength="15" id="ShopActTxt" placeholder="Shop Act/ Local Body Certificate" data-entry="ShopActTxt" />
-                          </td>
-                          <td>
-                              <div class="input-file-container">
-                                  <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="ShopAct" data-docutypeid="5" data-docutype="ShopAct" />
-                              </div>
-                          </td>
-                          <td class="text-left px-0">
-                              <a href="" target="_blank" id="ShopActPath" class="form-text links text-muted hide mb-2  w-100"><i class="fa fa-file-alt  text-primary"></i></a>
-                              <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1" style="height: 25px; width: 25px;"
-                                  id="ShopActImg" alt="Document Uploaded Successfully" title="Document Uploaded Successfully" />
-                              <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg" style="height: 25px; width: 25px; cursor: pointer;"
-                                  id="ShopActImgDelete" alt="Delete Uploaded Document" title="Delete Uploaded Document" onclick="onClickDeleteUploadedDoc('ShopAct')" />
-                          </td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-          <div class="row sectionDiv">
-            <div class="col-md-12 mt-3">
-                <h6 class="form-heading fw-bold" id="lblTPApplicationDetails">Application Details</h6>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10">
-                <div class="row">
-                    <label for="ApplicationType" class="col-md-3 col-form-label"
-                        id="lblTPApplicationType">Application Type:</label>
-                    <div class="col-md-9">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" formControlName="ApplicationType"
-                                onclick="FN_ApplicationType(true)" name="ApplicationType"
-                                id="TemporaryPlotProposal" value="TemporaryPlotProposal" checked>
-                            <label class="form-check-label" for="TemporaryPlotProposal"
-                                id="lblTemporaryPlotProposal">Temporary Plot Proposal</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" formControlName="ApplicationType"
-                                onclick="FN_ApplicationType(false)" name="ApplicationType"
-                                id="ProjectSelfConsumption" value="ProjectSelfConsumption">
-                            <label class="form-check-label" for="ProjectSelfConsumption"
-                                id="lblProjectSelfConsumption">Project Self Consumption</label>
-                        </div>
-                    </div>
+                <label for="ddlPlotDistrict" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblPlotLocationTP">Plot Location</span>:</label>
+                <div class="col-sm-7 pl-0">
+                  <p class="font-weight-bold ml-1 mt-1 mb-0">Interior</p>
                 </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <div class="col-md-5">
-                        <label for="ddlLeaseType" class="col-form-label requiredlabel"><span
-                                id="lblLeaseTypeTP">Lease Type</span>:<span
-                                class="fa fa-asterisk"></span></label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control disabledUpdate" id="ddlLeaseType" data-required="bs"
-                            [disabled]="true" formControlName="ddlLeaseType">
-                            <option value="Temporary" selected="selected">Temporary</option>
-                        </select>
-                    </div>
-                </div>
+              </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group row">
-                    <div class="col-md-5 ">
-                        <label for="ddlProposalLevel" class="col-form-label requiredlabel"><span
-                                id="lblProposalLevelTP">Proposal Level</span>:<span
-                                class="fa fa-asterisk"></span></label>
-                    </div>
-                    <div class="col-md-7">
-                        <select class="form-control" id="ddlProposalLevel" data-required="bs"
-                            formControlName="ddlProposalLevel">
-                            <option value="" selected="selected">Proposal Level</option>
-                            <option value="District">District</option>
-                            <option value="SDO">Sub-Division</option>
-                            <option value="Tahsil">Tehsil</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4 divProjectSelfConsumption sectionDiv">
-            <div class="col-md-12 mt-3">
-                <h6 class="form-heading fw-bold" id="lblTPProjectDetailsTP">Project Details</h6>
-            </div>
-            <div class="col-md-12">
-                <div class="form-group row">
-                    <label for="ProjectType" class="col-md-2 col-form-label" id="lblTPProjectTypeTP">Project
-                        Type:</label>
-                    <div class="col-md-7 pl-sm-5">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" formControlName="ProjectType"
-                                onclick="FN_ProjectType(true)" name="ProjectType" id="Private"
-                                value="Private" checked>
-                            <label class="form-check-label" for="Private" id="lblPrivate">Private</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" formControlName="ProjectType"
-                                onclick="FN_ProjectType(false)" name="ProjectType" id="Government"
-                                value="Government">
-                            <label class="form-check-label" for="Government"
-                                id="lblGovernment">Government</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 divGovernment">
-                <div class="form-group row">
-                    <label class="col-md-5  col-form-label requiredlabel" for="txtDepartment">
-                        <span id="lblDepartmentTP">Department</span>:<span class="fa fa-asterisk"></span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text"
-                            class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
-                            data-required="bs" formControlName="txtDepartment" length="200" id="txtDepartment"
-                            placeholder="Department Name">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 divGovernment">
-                <div class="form-group row">
-                    <label class="col-md-5  col-form-label requiredlabel" for="txtOffice">
-                        <span id="lblOfficeTP">Office</span>:<span class="fa fa-asterisk"></span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text"
-                            class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
-                            data-required="bs" formControlName="txtOffice" length="200" id="txtOffice"
-                            placeholder="Office Name">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 divGovernment">
-                <table class="table table-borderless mt-3">
-                    <thead class="table-dark">
-                        <tr>
-                            <th >Work Order Number</th>
-                            <th></th>
-                            <th class="text-left"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="form-group">
-                            <td>
-                                <input type="text"
-                                    class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
-                                    minlength="12" maxlength="12" id="WorkOrderTxt"
-                                    placeholder="WorkOrder Number" formControlName="WorkOrderTxt" />
+              <div class="form-group row">
+                <label for="rbRural" class="col-sm-5 col-form-label requiredlabel"><span
+                    id="lblCategoryOuterTP">Category</span>:</label>
 
-                            </td>
-                            <td>
-                                <div class="input-file-container">
-                                    <input type="file" class="form-control uploadDocNoc" accept=".jpg,.jpeg,.png,.pdf" id="WorkOrder" data-docutype="WorkOrder" />
-                                </div>
-                            </td>
-                            <td class="text-left px-1">
-                                <a href="" target="_blank" id="WorkOrderPath"
-                                    class="ml-1 links text-muted hide w-100"><i
-                                        class="fa fa-file-alt  text-primary fa-file-alt"></i></a>
-                                <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-2"
-                                    style="height: 25px; width: 25px;" id="WorkOrderImg"
-                                    alt="WorkOrder card" />
-                                <img src="../../../../assets/images/close_upload_file.svg" class="uploadDocBtn"
-                                    style="height: 25px; width: 25px;" id="WorkOrderImgDelete"
-                                    onclick="onClickDeleteUploadedWorkOrderDoc()" alt="Delete file" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-sm-7 px-0 mt-1">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" formControlName="category" name="qCategory"
+                      id="qCategory1" value="Rural" checked />
+                    <label class="form-check-label" for="qCategory1">Rural</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" formControlName="category" name="qCategory"
+                      id="qCategory2" value="Urban" />
+                    <label class="form-check-label" for="qCategory2">Urban</label>
+                  </div>
+                </div>
+              </div>
             </div>
 
+
             <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-md-5  col-form-label requiredlabel" for="txtProjectCode">
-                        <span id="lblProjectCodeTP">Project Code</span>:<span class="fa fa-asterisk"></span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text"
-                            class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
-                            data-required="bs" formControlName="txtProjectCode" length="200" id="txtProjectCode"
-                            placeholder="Project Code">
-                    </div>
+              <div class="form-group row mb-0">
+                <label for="ddlPlotDistrict" class="col-sm-5 col-form-label requiredlabel"><span
+                    id="lblDistrictOuterTP">District</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7 pl-0">
+                  <select class="form-control selectpicker" id="district" data-required="bs" formControlName="district">
+                    <option selected locationid="0">District</option>
+                  </select>
                 </div>
+              </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-md-5 col-form-label requiredlabel requiredlabel" for="txtProjectName">
-                        <span id="lblProjectNameTP">Project Name</span>:<span class="fa fa-asterisk"></span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text"
-                            class="form-control validate-alphanumericWithSpaceAndSomeSpecialChars  text-capitalize validate-length"
-                            data-required="bs" formControlName="txtProjectName" length="200" id="txtProjectName"
-                            placeholder="Project Name">
-                    </div>
+              <div class="form-group row mb-0">
+                <label for="ddlPlotTalukaCTSO" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblTalukaOuterTP">Taluka/CTSO</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7 pl-0">
+                  <select class="form-control selectpicker" id="taluka" data-required="bs" formControlName="taluka">
+                    <option selected locationid="0">Taluka/CTSO</option>
+                  </select>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <div class="form-group row">
-                    <label for="txtAddress" class="col-sm-3 col-form-label requiredlabel"
-                        style="flex: 0 0 22.666667%; max-width: 22.666667%;"><span
-                            id="lblAddressProjectTP">Address</span>:<span
-                            class="fa fa-asterisk"></span></label>
-                    <div class="col-sm-9 px-0">
-                        <input class="form-control validate-alphanumericWithSpace" id="txtAddress"
-                            data-required="bs" formControlName="txtAddress" placeholder="Address" />
-                    </div>
-                </div>
+              </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="txtProjectLatitude" class="col-sm-5 col-form-label requiredlabel"><span
-                            id="lblProjectLocationLatitudeTP">Project Location (Latitude)</span>:<span
-                            class="fa fa-asterisk"></span></label>
+              <div class="form-group row  mb-0">
+                <label for="censusId" class="col-sm-5 col-form-label formVillage requiredlabel"><span
+                    id="lblVillageOuterTP">Village</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <label for="censusId" class="col-sm-5 col-form-label formCity d-none requiredlabel"><span
+                    id="lblCityOuterTP">City</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7 pl-0">
+                  <select class="form-control selectpicker" id="censusId" data-required="bs" formControlName="censusId">
+                    <option selected locationid="0">Village</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mb-3 mt-3">
+          <div class="card card-bg" style="box-shadow: 0px 0px 2px #d1dfef;">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class="form-heading">ASSIGN SURVEY NUMBER</h6>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="rbRural" class="col-sm-5 col-form-label"><span
+                        id="lblCategoryInnerTP">Category</span>:</label>
+                    <div class="col-sm-7 px-0 mt-1">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="category" name="CategorySurvey"
+                          id="CategoryRural" value="Rural" checked />
+                        <label class="form-check-label" for="CategoryRural">Rural</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="category" name="CategorySurvey"
+                          id="CategoryUrban" value="Urban" />
+                        <label class="form-check-label" for="CategoryUrban">Urban</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row mb-0">
+                    <label for="ddlPlotDistrict" class="col-sm-5 col-form-label requiredlabel"><span
+                        id="lblDistrictInnerTP">District</span>:<sup class=""><span
+                          class="fa fa-asterisk small text-danger"></span></sup></label>
                     <div class="col-sm-7">
-                        <input type="text" placeholder="99.9999" class="form-control validate-latlong"
-                            length="7" id="ProjectLatitude" data-required="bs" formControlName="ProjectLatitude"
-                            autocomplete="off">
+                      <select formControlName="DistrictSurvey" id="DistrictSurvey" class="form-control selectpicker">
+                        <option value="">District</option>
+                      </select>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="txtProjectLongitude"
-                        class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                            id="lblProjectLocationLongitudeTP">Project Location (Longitude)</span>:<span
-                            class="fa fa-asterisk"></span></label>
-                    <div class="col-sm-6">
-                        <input type="text" placeholder="99.9999" class="form-control validate-latlong"
-                            length="7" id="ProjectLongitude" data-required="bs"
-                            formControlName="ProjectLongitude" autocomplete="off">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row mb-0">
+                    <label for="TalukaSurvey" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                        id="lblTalukaInnerTP">Taluka/CTSO</span>:<sup class=""><span
+                          class="fa fa-asterisk small text-danger"></span></sup></label>
+                    <div class="col-sm-7">
+                      <select formControlName="TalukaSurvey" id="TalukaSurvey" class="form-control selectpicker">
+                        <option value="">Taluka/CTSO</option>
+                      </select>
                     </div>
-                    <div class="col-md-1 px-0 d-flex align-items-start">
-                        <button type="button" class="btn btn-link p-0" data-toggle="modal"
-                            data-target="#ProjectDetailsModal">
-                            <img src="../../../../assets/images/mapPin.svg" style="height: 25px; width: 25px;"
-                                alt="LatLong" />
-                        </button>
-                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="IsAppliedForZeroRoyaltyScheme" class="col-md-5 col-form-label"><span
-                            id="lblZeroRoyaltySchemeTP">Zero Royalty Scheme</span></label>
-                    <div class="col-md-7">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio"
-                                formControlName="IsAppliedForZeroRoyaltyScheme"
-                                onclick="FN_IsAppliedForZeroRoyaltyScheme(false)"
-                                name="IsAppliedForZeroRoyaltyScheme" id="IsAppliedForZeroRoyaltySchemeNo"
-                                value="No" checked>
-                            <label class="form-check-label" for="IsAppliedForZeroRoyaltySchemeNo"
-                                id="lblIsAppliedForZeroRoyaltySchemeNo">No</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio"
-                                formControlName="IsAppliedForZeroRoyaltyScheme"
-                                onclick="FN_IsAppliedForZeroRoyaltyScheme(true)"
-                                name="IsAppliedForZeroRoyaltyScheme" id="IsAppliedForZeroRoyaltySchemeYes"
-                                value="Yes">
-                            <label class="form-check-label" for="IsAppliedForZeroRoyaltySchemeYes"
-                                id="lblIsAppliedForZeroRoyaltySchemeYes">Yes</label>
-                        </div>
-
+                <div class="col-md-6">
+                  <div class="form-group row  mb-0">
+                    <label class="col-sm-5 pr-0 col-form-label VillageSurveyVillage requiredlabel"><span
+                        id="lblVillageInnerTP">Village</span>:<sup class=""><span
+                          class="fa fa-asterisk small text-danger"></span></sup></label>
+                    <label class="col-sm-5 pr-0 col-form-label VillageSurveyCity hide requiredlabel"><span
+                        id="lblCityInnerTP">City</span>:<sup class=""><span
+                          class="fa fa-asterisk small text-danger"></span></sup></label>
+                    <div class="col-sm-7">
+                      <select formControlName="VillageSurvey" id="VillageSurvey" class="form-control selectpicker">
+                        <option value="">Village</option>
+                      </select>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="col-md-6 divIsAppliedForZeroRoyaltySchemeYes hide">
-                <div class="form-group row">
-                    <label for="ddlSchemeType" class="col-md-5 col-form-label requiredlabel"><span
-                            id="lblTPSchemeType">Scheme Type</span>:<span
-                            class="fa fa-asterisk"></span></label>
-                    <div class="col-md-7">
-                        <select class="form-control selectpicker" data-required="bs"
-                            formControlName="ddlSchemeType" id="ddlSchemeType">
-                            <option value="">Scheme Type</option>
-                        </select>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="txtSurveyNo" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                        id="lblSurveyNoInnerTP">Survey No.</span>:<sup class=""><span
+                          class="fa fa-asterisk small text-danger"></span></sup></label>
+                    <div class="col-sm-7">
+                      <input type="text"
+                        class="form-control bg-transparent validate-length validate-alphanumericWithSpaceAndSomeSpecialChars"
+                        maxlength="20" length="20" formControlName="surveyNo" id="surveyNo" placeholder="Survey Number">
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="row mt-4 sectionDiv">
-            <div class="col-md-12 mt-3">
-                <h6 class="form-heading fw-bold" id="lblPlotDetailsTP">Plot Details</h6>
-            </div>
-            <div class="col-md-12 mb-2">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group row mb-0">
-                            <label for="ddlPlotDistrict"
-                                class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblPlotLocationTP">Plot Location</span>:</label>
-                            <div class="col-sm-7 pl-0">
-                                <p class="font-weight-bold ml-1 mt-1 mb-0">Interior</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="rbRural" class="col-sm-5 col-form-label requiredlabel"><span
-                                    id="lblCategoryOuterTP">Category</span>:</label>
-                            <div class="col-sm-7 px-0 mt-1">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" formControlName="category"
-                                        name="qCategory" id="qCategory1" value="Rural" checked />
-                                    <label class="custom-control-label" for="qCategory1">Rural</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input class="custom-control-input" type="radio" formControlName="category"
-                                        name="qCategory" id="qCategory2" value="Urban" />
-                                    <label class="custom-control-label" for="qCategory2">Urban</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-
-                    <div class="col-md-6">
-                        <div class="form-group row mb-0">
-                            <label for="ddlPlotDistrict" class="col-sm-5 col-form-label requiredlabel"><span
-                                    id="lblDistrictOuterTP">District</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7 pl-0">
-                                <select class="form-control selectpicker" id="district" data-required="bs"
-                                    formControlName="district">
-                                    <option selected locationid="0">District</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row mb-0">
-                            <label for="ddlPlotTalukaCTSO"
-                                class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblTalukaOuterTP">Taluka/CTSO</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7 pl-0">
-                                <select class="form-control selectpicker" id="taluka" data-required="bs"
-                                    formControlName="taluka">
-                                    <option selected locationid="0">Taluka/CTSO</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row  mb-0">
-                            <label for="censusId"
-                                class="col-sm-5 col-form-label formVillage requiredlabel"><span
-                                    id="lblVillageOuterTP">Village</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <label for="censusId"
-                                class="col-sm-5 col-form-label formCity d-none requiredlabel"><span
-                                    id="lblCityOuterTP">City</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7 pl-0">
-                                <select class="form-control selectpicker" id="censusId" data-required="bs"
-                                    formControlName="censusId">
-                                    <option selected locationid="0">Village</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <table class="table table-borderless mt-2 mb-0">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Document Name</th>
+                        <th></th>
+                        <th style="width: 80px;" class="text-left"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="PlotDetailsDocDiv">
+                      <tr class="form-group">
+                        <td>
+                          <label for="PanTxt" class="requiredlabel m-0">
+                            <span id="lblPAN">Owners Approval</span>:<sup class=""><span
+                                class="fa fa-asterisk small text-danger"></span></sup>
+                          </label>
+                        </td>
+                        <td>
+                          <div class="input-file-container">
+                            <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="Pan"
+                              data-docutype="Pan" data-docutypeid="1" />
+                          </div>
+                        </td>
+                        <td class="text-left px-0">
+                          <a href="" target="_blank" id="PanPath" class="form-text links text-muted mb-2 hide w-100"><i
+                              class="fa fa-file-alt text-primary"></i></a>
+                          <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                            style="height: 25px; width: 25px;" id="PanImg" alt="Document Uploaded Successfully"
+                            title="Document Uploaded Successfully" />
+                          <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                            style="height: 25px; width: 25px; cursor: pointer;" id="PanImgDelete"
+                            alt="Delete Uploaded Document" title="Delete Uploaded Document"
+                            onclick="onClickDeleteUploadedDoc('Pan')" />
+                        </td>
+                      </tr>
+                      <tr class="form-group">
+                        <td>
+                          <label for="PanTxt" class="requiredlabel m-0">
+                            <span id="lblPAN">7/12</span>:<sup class=""><span
+                                class="fa fa-asterisk small text-danger"></span></sup>
+                          </label>
+                        </td>
+                        <td>
+                          <div class="input-file-container">
+                            <input type="file" class="form-control uploadDoc" accept=".jpg,.jpeg,.png,.pdf" id="Pan"
+                              data-docutype="Pan" data-docutypeid="1" />
+                          </div>
+                        </td>
+                        <td class="text-left px-0">
+                          <a href="" target="_blank" id="PanPath" class="form-text links text-muted mb-2 hide w-100"><i
+                              class="fa fa-file-alt text-primary"></i></a>
+                          <img src="../../../../assets/images/success.svg" class="uploadDocImg mx-1"
+                            style="height: 25px; width: 25px;" id="PanImg" alt="Document Uploaded Successfully"
+                            title="Document Uploaded Successfully" />
+                          <img class="uploadDocBtn" src="../../../../assets/images/close_upload_file.svg"
+                            style="height: 25px; width: 25px; cursor: pointer;" id="PanImgDelete"
+                            alt="Delete Uploaded Document" title="Delete Uploaded Document"
+                            onclick="onClickDeleteUploadedDoc('Pan')" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-            </div>
-            <div class="col-md-12 mb-3 mt-3">
-                <div class="card card-bg" style="box-shadow: 0px 0px 2px #d1dfef;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h6 class="form-heading">ASSIGN SURVEY NUMBER</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group row">
-                                    <label for="rbRural" class="col-sm-5 col-form-label"><span
-                                            id="lblCategoryInnerTP">Category</span>:</label>
-                                    <div class="col-sm-7 pr-0">
-                                        <div class="custom-control custom-radio custom-control-inline mt-1">
-                                            <input class="custom-control-input" type="radio"
-                                                formControlName="CategorySurvey" onclick="FN_Scategory()"
-                                                name="CategorySurvey" id="CategoryRural" value="Rural"
-                                                checked>
-                                            <label class="custom-control-label"
-                                                for="CategoryRural">Rural</label>
-                                        </div>
-                                        <div
-                                            class="custom-control custom-radio custom-control-inline  mt-1 mr-0">
-                                            <input class="custom-control-input" type="radio"
-                                                formControlName="CategorySurvey" onclick="FN_Scategory()"
-                                                name="CategorySurvey" id="CategoryUrban" value="Urban">
-                                            <label class="custom-control-label"
-                                                for="CategoryUrban">Urban</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group row mb-0">
-                                    <label for="ddlPlotDistrict"
-                                        class="col-sm-5 col-form-label requiredlabel"><span
-                                            id="lblDistrictInnerTP">District</span>:<span
-                                            class="fa fa-asterisk"></span></label>
-                                    <div class="col-sm-7">
-                                        <select formControlName="DistrictSurvey" id="DistrictSurvey"
-                                            class="form-control selectpicker">
-                                            <option value="">District</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group row mb-0">
-                                    <label for="TalukaSurvey"
-                                        class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                            id="lblTalukaInnerTP">Taluka/CTSO</span>:<span
-                                            class="fa fa-asterisk"></span></label>
-                                    <div class="col-sm-7">
-                                        <select formControlName="TalukaSurvey" id="TalukaSurvey"
-                                            class="form-control selectpicker">
-                                            <option value="">Taluka/CTSO</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group row  mb-0">
-                                    <label
-                                        class="col-sm-5 pr-0 col-form-label VillageSurveyVillage requiredlabel"><span
-                                            id="lblVillageInnerTP">Village</span>:<span
-                                            class="fa fa-asterisk"></span></label>
-                                    <label
-                                        class="col-sm-5 pr-0 col-form-label VillageSurveyCity hide requiredlabel"><span
-                                            id="lblCityInnerTP">City</span>:<span
-                                            class="fa fa-asterisk"></span></label>
-                                    <div class="col-sm-7">
-                                        <select formControlName="VillageSurvey" id="VillageSurvey"
-                                            class="form-control selectpicker">
-                                            <option value="">Village</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group row">
-                                    <label for="txtSurveyNo"
-                                        class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                            id="lblSurveyNoInnerTP">Survey No.</span>:<span
-                                            class="fa fa-asterisk"></span></label>
-                                    <div class="col-sm-7">
-                                        <input type="text"
-                                            class="form-control bg-transparent validate-length validate-alphanumericWithSpaceAndSomeSpecialChars"
-                                            maxlength="20" length="20" formControlName="surveyNo" id="surveyNo"
-                                            placeholder="Survey Number">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table my-0 home-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Document Name</th>
-                                            <th style="width: 150px;"></th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="PlotDetailsDocDiv"></tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
+              </div>
+              <!-- <div class="row mt-2">
                             <div class="col-md-12" id="PlotDetailsBtns">
                             </div>
                         </div>
@@ -802,278 +892,238 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div> -->
             </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="txtPlotLocationLatitude"
-                                class="col-sm-5 col-form-label requiredlabel"><span
-                                    id="lblPlotLocationLatitudeTP">Plot Location (Latitude)</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7">
-                                <input type="text" placeholder="99.9999"
-                                    class="form-control validate-latlong" length="7"
-                                    id="plotLocation_Latitude" data-required="bs"
-                                    formControlName="plotLocation_Latitude" autocomplete="off">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="txtPlotLocationLongitude"
-                                class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblPlotLocationLongitudeTP">Plot Location (Longitude)</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="99.9999"
-                                    class="form-control validate-latlong" length="7"
-                                    id="plotLocation_Longitude" data-required="bs"
-                                    formControlName="plotLocation_Longitude" autocomplete="off">
-                            </div>
-                            <div class="col-md-1 px-0 d-flex">
-                                <button type="button" class="btn btn-link p-0 d-flex" data-toggle="modal"
-                                    data-target="#selectlatlong">
-                                    <img src="assets/images/mapPin.svg"
-                                        style="height: 20px; width: 20px; margin-top: 10px;"
-                                        alt="LatLong" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="ddlMineral" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblMineralTP">Mineral</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7">
-                                <select formControlName="MineralType" id="MineralType" data-required="bs"
-                                    class="form-control  selectpicker">
-                                    <option value="">Mineral</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="area" class="col-sm-5 col-form-label requiredlabel"><span
-                                    id="lblAreaTP">Area (Hectare)</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control validate-decimal-number"
-                                    formControlName="area" data-required="bs" id="area" maxlength="5" length="5"
-                                    placeholder="Area" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="txtQuantity"
-                                class="col-md-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblQuantity">Quantity</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-md-5">
-                                <div class="input-group">
-                                    <input type="text" class="form-control validate-decimal-number"
-                                        data-required="bs" maxlength="7" length="7" id="txtQuantity"
-                                        formControlName="txtQuantity" placeholder="Quantity">
-                                </div>
-                            </div>
-                            <label class="col-md-2 mb-0 col-form-label"
-                                style="padding-top: 0.6rem;">Brass</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="txtLiftingPeriod"
-                                class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblLiftingPeriodTP">Lifting Period (Month)</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control validate-number" maxlength="2"
-                                    length="2" id="txtLiftingPeriod" data-required="bs"
-                                    formControlName="txtLiftingPeriod" placeholder="Lifting Period"
-                                    autocomplete="off">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="txtReasonApply"
-                                class="col-sm-5 pr-0 col-form-label requiredlabel"><span
-                                    id="lblReasonForApplyingTP">Reason For Applying</span>:<span
-                                    class="fa fa-asterisk"></span></label>
-                            <div class="col-sm-7">
-                                <textarea rows="2"
-                                    class="form-control border validate-alphanumericWithSpace"
-                                    id="txtReasonApply" data-required="bs" formControlName="txtReasonApply"
-                                    placeholder="Reason For Applying"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="row mt-3 sectionDiv">
-            <div class="col-md-12">
-                <h6 class="form-heading"><span id="lblNOCfromDepartmentsTP">NOC from Departments</span></h6>
-            </div>
-            <div class="col-sm-12">
-                <table class="table mt-0 home-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 162px;">Department Name</th>
-                            <th style="width: 162px;">Document Number</th>
-                            <th style="width: 150px;"></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="NOCfromDepartmentsDocDiv">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row mt-3 sectionDiv">
-            <div class="col-md-12">
-                <h6 class="form-heading"><span id="lblOtherDocumentsTP">Other Documents</span></h6>
-            </div>
-            <div class="col-md-12 mt-1">
-                <div class="row">
-                    <div class="col-md-4">
-                        <input class="form-control w-100" id="txtDocName" placeholder="Document Name" />
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text"
-                            class="form-control validate-length validate-alphanumericWithSpaceAndSomeSpecialChars"
-                            maxlength="200" length="200" id="otherDocTxt" placeholder="Document Number"
-                            formControlName="otherDocTxt" autocomplete="off">
-                    </div>
-                    <div class="col-md-4 d-flex justify-content-between">
-                        <div style="max-width: 165px;">
-                            <div class="input-file-container">
-                                <input type="file" class="input-file uploadDocNoc"
-                                    accept=".jpg,.jpeg,.png,.pdf" id="otherDoc"
-                                    data-doctypename="Other Document" data-doctypeid="0"
-                                    data-docutype="otherDoc" />
-                                <label for="otherDoc" class="input-file-trigger">Upload Document</label>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <a href="" target="_blank" id="otherDocPath"
-                                class="form-text hide links w-100"><i
-                                    class="fas text-primary mr-1 fa-file-alt"></i></a>
-                            <img src="assets/images/success.svg" alt="Document Uploaded successfully"
-                                title="Document Uploaded successfully" class="uploadDocImg mx-2 hide"
-                                style="height: 25px; width: 25px;" id="otherDocImg" />
-                            <img class="uploadDocBtn hide" alt="Delete Uploaded Document"
-                                title="Delete Uploaded Document" id="otherDocImgDelete"
-                                onclick="onClickDeleteUploadedOtherDoc()"
-                                src="assets/images/close_upload_file.svg"
-                                style="height: 25px; width: 25px; cursor: pointer" />
-                        </div>
-                    </div>
-                    <div class="col-md-1 text-right pl-0">
-                        <button type="button" class="btn btn-sm btn-success" id="btnAddOtherDocs"><i
-                                class="fa fa-plus"></i></button>
-                    </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="txtPlotLocationLatitude" class="col-sm-5 col-form-label requiredlabel"><span
+                    id="lblPlotLocationLatitudeTP">Plot Location (Latitude)</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7">
+                  <input type="text" placeholder="99.9999" class="form-control validate-latlong" length="7"
+                    id="plotLocation_Latitude" data-required="bs" formControlName="plotLocation_Latitude"
+                    autocomplete="off">
                 </div>
-            </div>
-            <div class="col-md-12 mt-3">
-                <table class="table mt-0 home-table">
-                    <thead>
-                        <tr>
-                            <th scope="col" style="width: 272px;" class="border-top-0">Document Name</th>
-                            <th scope="col" style="width: 162px;" class="border-top-0">Document Number</th>
-                            <th scope="col" class="border-top-0"></th>
-                        </tr>
-                    </thead>
-                    <tbody id="documentsDiv"></tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6" id="isOTPsend">
-                <div class="form-group mb-1 row">
-                    <label for="txtOTPimt" class="col-md-4 col-form-label requiredlabel"><span
-                            id="lblOTP">Verify OTP</span>:<span class="fa fa-asterisk"></span></label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control validate-number validate-min-length"
-                            data-required="bs" minlength="5" maxlength="5" length="5" id="txtOTPimt"
-                            formControlName="txtOTPimt" placeholder="OTP">
-                    </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-input btn-success" type="button" id="btnOTP">Send
-                            OTP</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 text-left">
-                        <small id="otpSuccessMsg" class="text-sucess d-none"></small>
-                    </div>
-                    <div class="col-md-4 text-right pr-4">
-                        <small class="timerContainer d-none">Time left = <span id="timer"></span></small>
-                    </div>
-                </div>
+              </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="txtOTPimt" class="col-md-4 col-form-label requiredlabel"><span
-                            id="lblCaptcha">Verify Captcha</span>:<span
-                            class="fa fa-asterisk"></span></label>
-                    <div class="col-md-7">
-                        <div class="g-recaptcha" data-callback="captchaCallbackFuntion"
-                            formControlName="g-recaptcha" data-required="bs"
-                            style="transform: scale(0.7); -webkit-transform: scale(0.7); transform-origin: 0 0; -webkit-transform-origin: 0 0;"
-                            data-expired-callback="captchaExpiredCallbackFuntion"
-                            data-sitekey="6Lc0WBAaAAAAACTyMTWTZ_3DaMn9rPPyXgCskw4A"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="col-md-6">
               <div class="form-group row">
-                  <div class="col-md-12">
-                      <div class="g-recaptcha" data-callback="captchaCallbackFuntion"  data-expired-callback="captchaExpiredCallbackFuntion" data-sitekey="6Lc0WBAaAAAAACTyMTWTZ_3DaMn9rPPyXgCskw4A"></div>
-                  </div>
+                <label for="txtPlotLocationLongitude" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblPlotLocationLongitudeTP">Plot Location (Longitude)</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-6">
+                  <input type="text" placeholder="99.9999" class="form-control validate-latlong" length="7"
+                    id="plotLocation_Longitude" data-required="bs" formControlName="plotLocation_Longitude"
+                    autocomplete="off">
+                </div>
+                <div class="col-md-1 px-0 d-flex">
+                  <button type="button" class="btn btn-link p-0 d-flex" data-toggle="modal"
+                    data-target="#selectlatlong">
+                    <img src="../../../../assets/images/mapPin.svg" style="height: 20px; width: 20px; margin-top: 10px;"
+                      alt="LatLong" />
+                  </button>
+                </div>
               </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="ddlMineral" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblMineralTP">Mineral</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7">
+                  <select formControlName="MineralType" id="MineralType" data-required="bs"
+                    class="form-control  selectpicker">
+                    <option value="">Mineral</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="area" class="col-sm-5 col-form-label requiredlabel"><span id="lblAreaTP">Area
+                    (Hectare)</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control validate-decimal-number" formControlName="area"
+                    data-required="bs" id="area" maxlength="5" length="5" placeholder="Area" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="txtQuantity" class="col-md-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblQuantity">Quantity</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-md-7">
+                  <div class="input-group">
+                    <input type="text" class="form-control validate-decimal-number" data-required="bs" maxlength="7"
+                      length="7" id="txtQuantity" formControlName="txtQuantity" placeholder="Quantity">
+                    <span class="input-group-text" id="basic-addon2">Brass</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="txtLiftingPeriod" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblLiftingPeriodTP">Lifting Period (Month)</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control validate-number" maxlength="2" length="2" id="txtLiftingPeriod"
+                    data-required="bs" formControlName="txtLiftingPeriod" placeholder="Lifting Period"
+                    autocomplete="off">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="txtReasonApply" class="col-sm-5 pr-0 col-form-label requiredlabel"><span
+                    id="lblReasonForApplyingTP">Reason For Applying</span>:<sup class=""><span
+                      class="fa fa-asterisk small text-danger"></span></sup></label>
+                <div class="col-sm-7">
+                  <textarea rows="2" class="form-control border validate-alphanumericWithSpace" id="txtReasonApply"
+                    data-required="bs" formControlName="txtReasonApply" placeholder="Reason For Applying"></textarea>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-12 footer-buttons pb-5 pt-0 mb-5 mb-md-0">
-              <button type="button" onclick="FN_clear()" id="btnClear" class="btn btn-danger btn-sm me-2">Clear</button>
-              <button type="button" id="btnSubmit" class="btn btn-success btn-sm">Submit</button>
+        </div>
+      </div>
+      <div class="row mt-3 sectionDiv">
+        <div class="col-md-12">
+          <h6 class="form-heading  fw-bold"><span id="lblNOCfromDepartmentsTP">NOC from Departments</span></h6>
+        </div>
+        <div class="col-sm-12">
+          <table class="table table-borderless">
+            <thead class="table-dark">
+              <tr>
+                <th>Department Name</th>
+                <th>Document Number</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="NOCfromDepartmentsDocDiv">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row mt-3 sectionDiv">
+        <div class="col-md-12">
+          <h6 class="form-heading"><span id="lblOtherDocumentsTP">Other Documents</span></h6>
+        </div>
+        <div class="col-md-12 mt-1">
+          <div class="row">
+            <div class="col-md-3">
+              <input class="form-control w-100" id="txtDocName" placeholder="Document Name" />
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control validate-length validate-alphanumericWithSpaceAndSomeSpecialChars"
+                maxlength="200" length="200" id="otherDocTxt" placeholder="Document Number"
+                formControlName="otherDocTxt" autocomplete="off">
+            </div>
+            <div class="col-md d-flex justify-content-between">
+              <div class="me-1">
+                <div class="input-file-container">
+                  <input type="file" class="form-control uploadDocNoc" accept=".jpg,.jpeg,.png,.pdf" id="otherDoc"
+                    data-doctypename="Other Document" data-doctypeid="0" data-docutype="otherDoc" />
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <a href="" target="_blank" id="otherDocPath" class="form-text hide links w-100"><i
+                    class="fas text-primary mr-1 fa-file-alt"></i></a>
+                <img src="assets/images/success.svg" alt="Document Uploaded successfully"
+                  title="Document Uploaded successfully" class="uploadDocImg mx-2 hide"
+                  style="height: 25px; width: 25px;" id="otherDocImg" />
+                <img class="uploadDocBtn hide" alt="Delete Uploaded Document" title="Delete Uploaded Document"
+                  id="otherDocImgDelete" onclick="onClickDeleteUploadedOtherDoc()"
+                  src="assets/images/close_upload_file.svg" style="height: 25px; width: 25px; cursor: pointer" />
+              </div>
+            </div>
+            <div class="col-md-auto text-right pl-0">
+              <button type="button" class="btn btn-sm btn-success" id="btnAddOtherDocs"><i
+                  class="fa fa-plus"></i></button>
+            </div>
           </div>
+        </div>
+        <div class="col-md-12 mt-3">
+          <table class="table table-borderless">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col" class="border-top-0">Document Name</th>
+                <th scope="col" class="border-top-0">Document Number</th>
+                <th scope="col" class="border-top-0"></th>
+              </tr>
+            </thead>
+            <tbody id="documentsDiv"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6" id="isOTPsend">
+          <div class="input-group mb-1 ">
+            <label for="txtOTPimt" class="col-form-label requiredlabel">
+              <span id="lblOTP">Verify OTP</span>:<sup class=""><span
+                  class="fa fa-asterisk small text-danger"></span></sup>
+            </label>
+
+            <input type="text" class="form-control validate-number validate-min-length" data-required="bs" minlength="5"
+              maxlength="5" length="5" id="txtOTPimt" formControlName="txtOTPimt" placeholder="OTP">
+
+            <button class="btn btn-input btn-success" type="button" id="btnOTP">Send
+              OTP</button>
+
+          </div>
+          <div class="row">
+            <div class="col-md-8 text-left">
+              <small id="otpSuccessMsg" class="text-sucess d-none"></small>
+            </div>
+            <div class="col-md-4 text-right pr-4">
+              <small class="timerContainer d-none">Time left = <span id="timer"></span></small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group ">
+            <label for="txtOTPimt" class="col-form-label requiredlabel"><span id="lblCaptcha">Verify Captcha</span>:<sup
+                class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+
+            <div class="g-recaptcha" data-callback="captchaCallbackFuntion" formControlName="g-recaptcha"
+              data-required="bs"
+              style="transform: scale(0.7); -webkit-transform: scale(0.7); transform-origin: 0 0; -webkit-transform-origin: 0 0;"
+              data-expired-callback="captchaExpiredCallbackFuntion"
+              data-sitekey="6Lc0WBAaAAAAACTyMTWTZ_3DaMn9rPPyXgCskw4A"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-lg-3 d-none d-md-none d-lg-block">
-      <div class="card">
-        <div class="card-header ">
-          Application
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item p-0">
-            <a routerLink="/interstate-mineral-transport" class="list-group-item list-group-item-action active" id="rgtlnkNotice">Interstate Mineral Transport</a>
-          </li>
-          <li class="list-group-item p-0">
-            <a routerLink="/temporary-proposal" class="list-group-item list-group-item-action" id="rgtlnkHowToParticipate">Temporary Proposal</a>
-          </li>
-        </ul>
-      </div>
+
+    <div class="col-md-12 footer-buttons pb-5 pt-0 mb-5 mb-md-0">
+      <button type="button" onclick="FN_clear()" id="btnClear" class="btn btn-danger btn-sm me-2">Clear</button>
+      <button type="button" id="btnSubmit" class="btn btn-success btn-sm">Submit</button>
     </div>
   </div>
+
+  <div class="col-lg-3 d-none d-md-none d-lg-block">
+    <div class="card">
+      <div class="card-header ">
+        Application
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item p-0">
+          <a routerLink="/interstate-mineral-transport" class="list-group-item list-group-item-action "
+            id="rgtlnkNotice">Interstate Mineral Transport</a>
+        </li>
+        <li class="list-group-item p-0">
+          <a routerLink="/temporary-proposal" class="list-group-item list-group-item-action active"
+            id="rgtlnkHowToParticipate">Temporary Proposal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
