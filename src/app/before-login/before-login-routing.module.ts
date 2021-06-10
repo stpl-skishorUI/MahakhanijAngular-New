@@ -12,7 +12,7 @@ import { HowToParticipateComponent } from './eauction/how-to-participate/how-to-
 import { GovernmentResolutionComponent } from './policy/government-resolution/government-resolution.component';
 import { FaqComponent } from './help/faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { ScreenReaderAccessComponent } from './screen-reader-access/screen-reader-access.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
@@ -27,6 +27,7 @@ const routes: Routes = [
     { path: 'government-resolution', component: GovernmentResolutionComponent },
     { path: 'faq', component: FaqComponent },
     { path: 'contact', component: ContactComponent },
+    { path: 'screen-reader-access', component: ScreenReaderAccessComponent },
 ];
 
 @NgModule({
