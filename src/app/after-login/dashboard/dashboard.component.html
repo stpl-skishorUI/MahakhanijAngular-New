@@ -1,46 +1,189 @@
 <div class="container-fluid">
-    <!-- <div class="row" id="topbarbtn">
+    <div class="row" id="topbarbtn">
         <div class="navbar navbar-light bg-white">
             <a class="navbar-brand">
                 Dashboard 
             </a>
             <div class="d-flex">
                 <span class="navbar-text text-muted small me-3">06-Jun-2021 to 07-Jun-2021</span>
-                <button class="btn btn-main" type="button"><i class="fas fa-filter me-2"></i> Filter</button>
+                <button class="btn btn-main" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-filter me-2"></i> Filter</button>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="row" id="content-wrapper">
         <div class="col-sm-9">
-            <div class="row mt-2">
-                <div class="col">
-                    Dashboard
-                </div>
-                <!-- <div class="navbar navbar-light" id="logoutbar">
-                    <a class="navbar-brand">Dashboard</a>
-                    <div class="d-flex">
-                        <span class="text-muted small me-2">
-                            06-Jun-2021 to 08-Jun-2021
-                        </span>
-                        <button class="btn btn-main btn-sm">
-                            <i class="fas fa-filter"></i> Filters
-                        </button>
+            <div class="row">
+                <div class="col-sm-5" id="dash-stats">
+                    <div class="card card-body border-0">
+                        <div class="card mb-2">
+                            <div class="row g-0">
+                                <div class="col-md-auto">
+                                    <img src="/assets/images/InnerImages/Methodwise.svg" alt="...">
+                                </div>
+                                <div class="col-md">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Revenue <small>(Amt.)</small></h6>
+                                        <div class="row g-1">
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Permanent Lease</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Temporary Lease</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>e-Auction</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Fine</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="row g-0">
+                                <div class="col-md-auto">
+                                    <img src="/assets/images/InnerImages/RegisteredMines.svg" alt="...">
+                                </div>
+                                <div class="col-md">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Registered Mines</h6>
+                                        <div class="row g-1">
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Sand</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Stone</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Other</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="row g-0">
+                                <div class="col-md-auto">
+                                    <img src="/assets/images/InnerImages/Vehicles.svg" alt="...">
+                                </div>
+                                <div class="col-md">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Vehicles</h6>
+                                        <div class="row g-1">
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Registered</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>With GPS</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="row g-0">
+                                <div class="col-md-auto">
+                                    <img src="/assets/images/InnerImages/eAuctions.svg" alt="...">
+                                </div>
+                                <div class="col-md">
+                                    <div class="card-body">
+                                        <h6 class="card-title">eAuctions <small>(Nos.)</small></h6>
+                                        <div class="row g-1">
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Pending Proposals</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>On-Going</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>On-Hold</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Completed</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="row g-0">
+                                <div class="col-md-auto">
+                                    <img src="/assets/images/InnerImages/SecondaryUnits.svg" alt="...">
+                                </div>
+                                <div class="col-md">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Secondary Units</h6>
+                                        <div class="row g-1">
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Trader</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Crusher</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#">
+                                                    <small>Processing Unit</small>
+                                                    <h6>12505</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
-                <div class="col text-end">
-                    <span class="text-muted small me-2">
-                        06-Jun-2021 to 08-Jun-2021
-                    </span>
-                    <button class="btn btn-main btn-sm">
-                        <i class="fas fa-filter"></i> Filters
-                    </button>
-                </div>
-            </div>
 
-            <div class="row mt-2">
-                <div class="col-sm-5">
-                    asdf
                 </div>
                 <div class="col-sm-7" id="dash-charts">
                     <div class="card mb-3">
@@ -69,7 +212,7 @@
                             <div class="card">
                                 <div class="card-header">Mineral-Wise Lifting (Brass)</div>
                                 <div class="card-body">
-                                    asdf
+                                    <img src="https://miro.medium.com/max/606/1*cU6iTKKs84hEeGsP22MDtw.png" class="img-fluid" />
                                 </div>
                             </div>
                         </div>
@@ -77,7 +220,7 @@
                             <div class="card">
                                 <div class="card-header">Division-Wise Lifting (Brass)</div>
                                 <div class="card-body">
-                                    asdf
+                                    <img src="https://reactscript.com/wp-content/uploads/2017/04/React-SVG-Pie-Chart-Component.png" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -91,137 +234,177 @@
                 <div class="card-body">
                     <div class="alertbox">
                         <span class="card-title">Illegal Plots Activities</span>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/Allocated.svg" alt="Allocated Plot" class="alertimage">
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/Allocated.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Allocated Plot <small>By GPS</small></h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Allocated Plot <small>By GPS</small></h6>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/Un-allocated.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Un-Allocated Plot <small>By GPS</small></h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/Citizen.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Citizen Complaints</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/Un-allocated.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Un-Allocated Plot <small>By GPS</small></h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/Citizen.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Citizen Complaints</h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="alertbox">
                         <span class="card-title">Intercepted Vehicles</span>
-                        <div class="d-flex mb-2">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>With GPS</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>With GPS</h6>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/WithoutGPS.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Without GPS</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/Citizen.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Citizen Complaints</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/WithoutGPS.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Without GPS</h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/Citizen.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Citizen Complaints</h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="alertbox">
                         <span class="card-title">Moving Illegal Vehicles</span>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Moving With Vehicles</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Moving With Vehicles</h6>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/Citizen.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Citizen Complaints</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/Citizen.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Citizen Complaints</h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="alertbox border-bottom-0 mb-0 pb-0">
                         <span class="card-title">Trips</span>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Total</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Total</h6>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>With GPS</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
+                        </a>
+                        <a href="#">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <img src="/assets/images/InnerImages/WithoutGPS.svg" alt="Allocated Plot" class="alertimage">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6>Without GPS</h6>
+                                </div>
+                                <div class="flex-grow-1 ms-3 text-end">
+                                    <span class="alertcount">1235</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/WithGPS.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>With GPS</h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="/assets/images/InnerImages/WithoutGPS.svg" alt="Allocated Plot" class="alertimage">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6>Without GPS</h6>
-                            </div>
-                            <div class="flex-grow-1 ms-3 text-end">
-                                <span class="alertcount">1235</span>
-                            </div>
-                        </div>
+                        </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
