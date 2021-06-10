@@ -122,7 +122,7 @@
     border-radius: 5px;
     background-color: #fefefe;
     margin: 1px;
-    padding-top: 5px;
+    padding-top: 2px;
 }
 
 #dash-stats .list-group-item:hover {
@@ -145,51 +145,3 @@
     font-size: 1rem;
     margin: 0;
 }
-
-
-/* 
-#dash-stats img {
-    background-color: var(--main-color);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    width: 42px;
-    height: 42px;
-}
-
-#dash-stats h6.card-title {
-    color: var(--main-color);
-}
-
-#dash-stats a h6 {
-    color: var(--link-color);
-    margin-bottom: 0;
-}
-
-#dash-stats .card {
-    border: none;
-    border-bottom: solid 2px #eee;
-    border-radius: 0;
-}
-
-#dash-stats .card-body {
-    padding: 10px;
-}
-
-#dash-stats a {
-    text-decoration: none;
-    display: block;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-#dash-stats a:hover {
-    background-color: #fafafa;
-}
-
-#dash-stats a small {
-    color: #888;
-    font-size: 0.75rem;
-    display: block;
-    margin-bottom: 5px;
-} */
