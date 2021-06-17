@@ -4,20 +4,20 @@
   <div class="row" id="sys-overview">
     <div class="col-lg-9 mb-5">
       <div class="content-head" id="lblGR">
-        <h4 class="mb-3">FREQUENTLY ASKED QUESTIONS</h4>
+        <h4 class="mb-3 fw-normal">Frequently Asked <strong class="fw-bold"> Questions</strong> </h4>
       </div>
       <div class="sect-head" id="lblsoverSubHead1">
-        <h6>Working of the System</h6>
+        <h6 class="fw-bold">Working of the System</h6>
       </div>
       <div class="row">
         <div class="col-md-6">
             <div class="input-group mb-3">
-                <span class="input-group-text" id=""><i class="fas fa-search"></i></span>
                 <input type="text" id="txtSearch" class="form-control" placeholder="Describe your Issue">
+                <button type="submit" class="btn btn-dark "><i class="fas fa-search "></i></button>
               </div>
         </div>
         <div class="col-md-12">
-            <div class="accordion" id="accordionExample">
+            <div class="accordion  theme-accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -191,19 +191,19 @@
     </div>
     <div class="col-lg-3 d-none d-md-none d-lg-block">
       <div class="card">
-        <div class="card-header ">
+        <div class="card-header bg-primary text-light text-uppercase small ">
             Help
         </div>
-        <ul class="list-group list-group-flush">
+        <ul class="nav nav-list flex-column">
          
-          <li class="list-group-item p-0">
-            <a routerLink="/" class="list-group-item list-group-item-action " id="lblrtGrievance">Grievance</a>
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link " id="lblrtGrievance">Grievance</a>
           </li>
-          <li class="list-group-item p-0">
-            <a routerLink="/faq" class="list-group-item list-group-item-action active" id="lblrtFAQ">Frequently Asked Questions</a>
+          <li class="nav-item">
+            <a routerLink="/faq" class="nav-link active" id="lblrtFAQ">Frequently Asked Questions</a>
           </li>
-          <li class="list-group-item p-0">
-            <a routerLink="/" class="list-group-item list-group-item-action" id="lblrtUserManual">User Manual</a>
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link " id="lblrtUserManual">User Manual</a>
           </li>
         </ul>
       </div>
