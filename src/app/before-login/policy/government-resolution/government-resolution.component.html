@@ -4,12 +4,12 @@
 <div class="row" id="sys-overview">
   <div class="col-lg-9 mb-5">
     <div class="content-head" id="lblGR">
-      <h4 class="mb-3">Government Resolution</h4>
+      <h4 class="mb-3 fw-normal">Government <strong class="fw-bold"> Resolution</strong></h4>
     </div>
     <div class="row">
       <div class="col-md-12">
         <table class="table table-bordered">
-          <thead>
+          <thead class="table-primary">
             <tr class="table-top">
               <th colspan="7">
                 <div class="row">
@@ -44,7 +44,7 @@
                     <input type="text" id="txtSearch" placeholder="Search" class="form-control" />
                   </div>
                   <div class="col-auto">
-                    <button type="button" id="btnApply" class="btn btn-sm btn-secondary my-1">
+                    <button type="button" id="btnApply" class="btn btn-sm btn-outline-primary my-1">
                       <span id="spnbtnApply" class="text-uppercase"> Apply</span>
                     </button>
                   </div>
@@ -143,23 +143,16 @@
         </table>
       </div>
     </div>
-
-
-
-
-
   </div>
   <div class="col-lg-3 d-none d-md-none d-lg-block">
     <div class="card">
-      <div class="card-header ">
+      <div class="card-header bg-primary text-light text-uppercase small">
         Policy
       </div>
-      <ul class="list-group list-group-flush">
-       
-        <li class="list-group-item p-0">
-          <a routerLink="/" class="list-group-item list-group-item-action active" id="rgtlblGR">Government Resolution</a>
+      <ul class="nav nav-list flex-column">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link active" id="rgtlblGR">Government Resolution</a>
         </li>
-
       </ul>
     </div>
   </div>

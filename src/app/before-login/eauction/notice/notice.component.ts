@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-notice',
   templateUrl: './notice.component.html',
-  styleUrls: ['./notice.component.css']
+  styleUrls: ['./notice.component.css', '../../before-login.component.css']
 })
 export class NoticeComponent implements OnInit {
 
