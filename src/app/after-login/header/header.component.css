@@ -4,9 +4,17 @@
     left: 0;
     width: 100%;
     box-shadow: 0 1px 0 rgba(22, 8, 43, .1);
-    padding: 0 1rem;
+    padding: 5px 1rem;
     z-index: 100;
-    background-color: #fff;
+    background-color: var(--main-color);
+}
+
+.header .btn {
+    padding: 19px;
+    border: none;
+    border-radius: 0;
+    background: #2a4766;
+    color: #fff;
 }
 
 .header__container {
@@ -17,7 +25,7 @@
 }
 
 .header__img {
-    height: 35px;
+    height: 38px;
 }
 
 .header__icon,
@@ -30,9 +38,9 @@
 }
 
 @media screen and (min-width:480px) {
-    .header {
+    /* .header {
         padding: 0 0.5rem 0 4.8rem
-    }
+    } */
     .header__container {
         height: var(--header-height);
     }
@@ -43,7 +51,7 @@
         display: block
     }
     .header__img {
-        height: 35px;
+        height: 38px;
         order: 0;
     }
 }

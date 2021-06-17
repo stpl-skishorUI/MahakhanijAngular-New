@@ -7,7 +7,7 @@ import { Router, NavigationStart, NavigationEnd, NavigationError } from '@angula
 })
 export class AppComponent {
   title = 'MahakhanijAngular-New';
-  isBeforeLoginPage: boolean = true;
+  isBeforeLoginPage: boolean = false;
   isLoginPage: boolean = true;
   constructor(
     private router: Router

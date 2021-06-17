@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css', '../after-login.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  selected: any;
   constructor() { }
 
   ngOnInit(): void {
