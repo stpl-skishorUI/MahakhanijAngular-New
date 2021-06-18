@@ -129,3 +129,43 @@ blockquote.blockquote {
     background: #ffffff;
     color: #0d6efd;
 }
+
+/* contact pages css start here */
+.card-deck .card .card-body h6 {
+    text-transform: uppercase;
+    color: #2d6caf;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    margin-top: 25px;
+    
+}
+.card-deck .card .card-body  {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffffed 50%,#ffffffe0 69%,#ffffffde 100%), url(../../assets/images/logo2.webp);
+    background-position-y: 1px;
+    background-size: 85px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.card-deck .card  {
+    padding: 5px;
+}
+.card-deck .card-body p i {
+    color: white;
+    padding: 2px 7px;
+    width: 24px;
+    height: 24px;
+    background: #2d6cb2;
+    margin-right: 5px;
+    font-size: 12px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+}
+.card-deck .card-body a {
+    color: #2d6cb2;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 600;
+}
+/* contact pages css end here */
