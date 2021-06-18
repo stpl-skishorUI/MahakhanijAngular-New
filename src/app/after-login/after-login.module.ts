@@ -3,7 +3,7 @@ import { AfterLoginComponent } from './after-login.component';
 import { AfterLoginRoutingModule } from './after-login-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserRegisterComponent } from './masters/user-register/user-register.component';
 
 @NgModule({
     imports: [
@@ -13,7 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         AfterLoginComponent,
         HeaderComponent,
         SidebarComponent,
-        DashboardComponent
+        UserRegisterComponent
     ],
     providers: [],
     exports: [

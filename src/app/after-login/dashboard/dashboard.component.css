@@ -1,21 +1,5 @@
-#buttonbar {
-    margin-bottom: 15px;
-    padding: 0;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-#buttonbar .navbar-brand {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #888;
-}
-
-#buttonbar .btn {
-    font-size: 0.85rem;
-    color: #fff;
-    background-color: var(--main-color);
-    box-shadow: none;
+#mahamap .card {
+    border-radius: 10px;
 }
 
 #mahamap .card-header {
@@ -51,6 +35,10 @@
     width: fit-content;
     margin-left: auto;
     background-color: #eee;
+}
+
+#rightbox .card {
+    border-radius: 10px;
 }
 
 #rightbox .card-header {

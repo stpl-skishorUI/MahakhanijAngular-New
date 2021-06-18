@@ -10,6 +10,7 @@ export class AppComponent {
   isBeforeLoginPage: boolean = false;
   isLoginPage: boolean = true;
   constructor(
+
     private router: Router
   ) {
     this.router.events.subscribe((event: any) => {

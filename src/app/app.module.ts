@@ -17,7 +17,7 @@ import { AfterLoginModule} from './after-login/after-login.module';
     AppRoutingModule,
     BeforeLoginModule,
     AfterLoginModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

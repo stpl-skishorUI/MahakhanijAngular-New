@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DateTimePickerModule } from '../../shared/component/dateTimePicker.module';
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        FormsModule,
+        DashboardRoutingModule,
+        DateTimePickerModule
     ],
     declarations: [
         DashboardComponent
     ],
-    providers: [],
     exports: [
+        DashboardComponent
     ]
 })
 

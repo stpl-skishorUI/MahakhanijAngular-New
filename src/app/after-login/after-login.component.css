@@ -38,3 +38,34 @@ main {
     margin-top: 93px;
     padding-top: 10px;
 }
+
+#buttonbar {
+    margin-bottom: 15px;
+    padding: 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#buttonbar .navbar-brand {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+    line-height: 38px;
+}
+
+#buttonbar .btn {
+    font-size: 0.85rem !important;
+    box-shadow: none !important;
+}
+
+#buttonbar .dropdown-menu {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-width: 200px;
+}
+
+#buttonbar .dropdown-menu .form-select,
+#buttonbar .dropdown-menu .form-check-label {
+    font-size: 0.85rem;
+    box-shadow: none;
+}

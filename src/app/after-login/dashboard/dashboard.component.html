@@ -1,16 +1,100 @@
-<div class="navbar navbar-light" id="buttonbar">
-    <div class="container-fluid p-0">
-        <a class="navbar-brand">
-            Dashboard
-        </a>
-
-        <div class="d-flex">
-            <span class="navbar-text me-2 small">
-                13-Jun-2021 to 15-Jun-2021
-              </span>
-            <button class="btn" type="submit">
-                Filter <i class="ms-2 fas fa-sort"></i>
-            </button>
+<div id="buttonbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <a class="navbar-brand">
+                    Dashboard
+                </a>
+            </div>
+            <div class="col-sm-8 text-end">
+                <div class="row g-2">
+                    <div class="col-sm-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-autoClose="false" type="button" id="ddlGeography" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select Geography
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="p-2">
+                                    <div class="mb-2">
+                                        <select class="form-select">
+                                            <option value="">All Divisions</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <select class="form-select">
+                                            <option value="">All District</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <select class="form-select">
+                                            <option value="">All Tahsil</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-0">
+                                        <select class="form-select">
+                                            <option value="">All Plot/Survey No.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-autoClose="false" type="button" id="ddlGeography" data-bs-toggle="dropdown" aria-expanded="false">
+                                Mineral Type
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="row p-2">
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkAll">
+                                            <label class="form-check-label" for="chkAll">
+                                              All
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkStone">
+                                            <label class="form-check-label" for="chkStone">
+                                              Stone
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkSoil">
+                                            <label class="form-check-label" for="chkSoil">
+                                              Soil
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkSand">
+                                            <label class="form-check-label" for="chkSand">
+                                              Sand
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkMurum">
+                                            <label class="form-check-label" for="chkMurum">
+                                              Murum
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkOther">
+                                            <label class="form-check-label" for="chkOther">
+                                              Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <app-date-time-picker autocomplete="off" id="dashboardDateTimePicker" [selectedRange]="selectedRange" [config]="dateTimePickerConfig"></app-date-time-picker>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -250,29 +334,28 @@
                         <button type="button" class="btn"><i class="fas fa-expand"></i></button>
                     </span>
                 </div>
-                <div class="card-body px-2">
-                    <div class="row g-0">
-                        <div class="col-sm-9">
-                            <img src="/assets/images/OuterImages/maharashtra-bg_o.svg" class="img-fluid">
-                        </div>
-                        <div class="col-sm-3">
+                <div class="card-body p-2">
+                    <div class="row">
+                        <div class="col-sm-12">
                             <div class="card card-body p-2" id="filters">
-                                <div class="mb-2">
+                                <div class="input-group">
+                                    <app-date-time-picker autocomplete="off" id="dashboardMapDateTimePicker" [selectedRange]="selectedRange" [config]="dateTimePickerConfig"></app-date-time-picker>
+
                                     <select class="form-select">
                                         <option>Mineral</option>
                                         <option>Sand</option>
                                         <option>Other</option>
                                     </select>
+                                    <button class="btn" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
                                 </div>
-                                <div class="mb-2">
-                                    <input class="form-control" type="text" placeholder="From Date" />
-                                    <div class="text-center">To</div>
-                                    <input class="form-control" type="text" placeholder="To Date" />
-                                </div>
-                                <button class="btn" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-sm-12">
+                            <img src="/assets/images/OuterImages/maharashtra-bg_o.svg" class="img-fluid">
                         </div>
                     </div>
                 </div>

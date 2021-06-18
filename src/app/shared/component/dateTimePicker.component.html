@@ -1,0 +1,14 @@
+<!-- <input type="text" name="daterange" ngxDaterangepickerMd [id]="id" [(ngModel)]="selected" [showCustomRangeLabel]="_config?.showCustomRangeLabel" [alwaysShowCalendars]="_config?.alwaysShowCalendars" [linkedCalendars]="_config?.linkedCalendars" [ranges]="_config?.ranges"
+    [showClearButton]="_config?.showClearButton" [locale]="_config?.locale" [placeholder]="_config?.placeholder" [keepCalendarOpeningWithRange]="_config?.keepCalendarOpeningWithRange" [minDate]="_config?.minDate" [maxDate]="_config?.maxDate" class="form-control"
+/> -->
+<style>
+    .form-control {
+        font-size: 0.85rem !important;
+        box-shadow: none !important;
+        outline: none;
+    }
+</style>
+
+<input type="text" name="daterange" ngxDaterangepickerMd [(ngModel)]="selectedRange" [showCustomRangeLabel]="_config?.showCustomRangeLabel" [alwaysShowCalendars]="_config?.alwaysShowCalendars" [linkedCalendars]="_config?.linkedCalendars" [ranges]="ranges"
+    [showClearButton]="_config?.showClearButton" [locale]="calendarLocale" [placeholder]="_config?.placeholder" [keepCalendarOpeningWithRange]="_config?.keepCalendarOpeningWithRange" [minDate]="_config?.minDate" [maxDate]="_config?.maxDate" class="form-control"
+/>
