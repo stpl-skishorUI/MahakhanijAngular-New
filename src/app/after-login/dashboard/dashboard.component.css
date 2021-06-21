@@ -141,13 +141,12 @@
 }
 
 #dash-stats a .card-body {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
 }
 
 #dash-stats a .card-footer {
     border-top: none;
     background-color: transparent;
     font-size: 0.75rem;
-    padding-top: 0;
+    padding: 0 7px 7px 7px;
 }
