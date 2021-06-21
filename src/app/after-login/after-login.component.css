@@ -69,3 +69,15 @@ main {
     font-size: 0.85rem;
     box-shadow: none;
 }
+
+.filterbox {
+    background-color: transparent;
+}
+
+.filterbox .form-control,
+.filterbox .form-select,
+.filterbox .btn,
+.filterbox .form-check {
+    font-size: 0.8rem;
+    box-shadow: none;
+}
