@@ -132,10 +132,12 @@
 #dash-stats a h5 {
     margin-bottom: 0;
     color: var(--main-color);
+    font-size: 1.1rem;
 }
 
 #dash-stats a small {
-    color: #aaa;
+    color: #666;
+    font-size: 0.68rem;
 }
 
 #dash-stats a .card-body {
