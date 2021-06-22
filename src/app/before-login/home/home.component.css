@@ -1,4 +1,4 @@
-#main-content {
+/* #main-content {
     background-image: url('/assets/images/OuterImages/maharashtra-bg_o.svg');
     height: 600px;
     background-repeat: no-repeat;
@@ -457,4 +457,103 @@
 #statistics .stat h3 {
     font-weight: 600;
     color: var(--orange-color);
+} */
+#heading{
+    padding: 20px 0;
+}
+#heading h1{
+    font-weight: 800;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+#heading h4{
+    font-weight: 600;
+    color: var(--orange-color);
+    font-size: 1.1rem;
+    background-color: #eee;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+#ministers .card
+{
+    border-radius: 10px;
+    text-align: center;
+}
+#ministers img{
+    width: 70px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	background: rgba(255, 177, 66, 1);
+  box-shadow: 0 0 0 0 rgba(255, 177, 66, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+  @keyframes pulse {
+	0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 177, 66, 0.7);
+      }
+      
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 177, 66, 0);
+      }
+      
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 177, 66, 0);
+      }
+}
+#ministers p.small{
+    color: var(--link-color);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+#ministers h5.card-title
+{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0 2px;
+    color: var(--main-color);
+}
+#ministers p.card-text
+{
+    font-size: 0.71rem;
+    color: #777;
+}
+#stat-counts{
+    margin-bottom: 15px;
+}
+#stat-counts .card
+{
+    border:none;
+}
+#stat-counts .card-header{
+    background-color: transparent;
+    border-bottom: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-color);
+    padding-bottom: 0;
+}
+#stat-counts .card-header img{
+    background-color: #eee;
+    padding:10px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 4px;
+    width: 38px;
+    height: 38px;
+}
+#stat-counts .card-body{
+    padding:10px 15px;
+}
+#stat-counts .card-body h3{
+    color: var(--orange-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
 }

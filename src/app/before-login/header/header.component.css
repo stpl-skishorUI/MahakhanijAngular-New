@@ -1,77 +1,71 @@
-header .logo {
-    width: 200px;
+#topbar
+{
+    font-size: 0.75rem;
+    padding:5px 0;
 }
-
-header .top-link {
-    padding: 0px 10px;
-    font-size: 0.7rem;
-    border-bottom: solid 1px #eee;
-    border-left: solid 1px #eee;
-    border-right: solid 1px #eee;
-    min-height: 26px;
+#topbar .toplink
+{
+    border-right: solid 1px #aaa;
 }
-
-header a {
-    line-height: 1.45rem;
-    color: var(--main-color);
+#topbar .toplink a{
+    color:#333;
     text-decoration: none;
+    line-height: 20px;
 }
-
-header .top-link .input-group-text {
-    font-size: 0.7rem;
-    background-color: transparent;
-    border: 0;
-    padding: 0 10px 0 0;
+#topbar .toplink a:hover{
+    color:var(--main-color);
 }
-
-header .btn-clr {
+#topbar .btn-clr
+{
+    margin: 0 1px;
     border: none;
-    margin: 2px;
-    width: 18px;
-    height: 18px;
-    border-radius: 3px !important;
+    border-radius: 3px;
+    padding: 8px;
+    display: inline-flex;
+    margin-bottom: -3px;
+    margin-left: 5px;
 }
-
-header .ori {
+.ori {
     background-color: var(--theme-o-color);
 }
-
-header .maroon {
+.maroon {
     background-color: var(--theme-maroon-color);
 }
-
-header .dark {
+.dark {
     background-color: var(--theme-dark-color);
 }
-
-header .btn-font {
-    border: solid 1px #eee;
-    background-color: #e5e5e5;
+#topbar .btn-font{
+    margin:1px;
+    border: solid 1px #aaa;
+    border-radius: 3px;
+    background-color:#eee;
+    text-align: center;
+    padding:0px 5px;
     font-size: 0.7rem;
-    margin: 2px;
-    border-radius: 2px;
 }
-
-header select {
-    border: 0;
-    padding: 5px 0;
+#topbar select{
+    border: none;
+    padding: 2px;
     outline: none;
+    box-shadow: none;
 }
-
-header .navbar {
-    padding: 0;
+.navbar .navbar-brand{
+    color: var(--main-color);
 }
-
-.navbar {
-    padding: 0;
-    font-size: 0.85rem;
+.logo {
+    width: 200px;
+    padding-right: 15px;
+    margin-right: 10px;
+    border-right: solid 2px #888;
 }
-
+.navbar{
+    box-shadow: 0px 2px 3px #e7e7e7;
+    padding-top: 0;
+}
 .navbar .dropdown-menu {
     font-size: 0.85rem;
-    padding: 10px;
+    padding:0;
 }
-
 .navbar .dropdown-menu .dropdown-item:hover,
 .navbar .login,
 .navbar .login:hover {
@@ -79,20 +73,16 @@ header .navbar {
     color: #fff !important;
     border-radius: 3px;
 }
-
 .navbar .nav-link {
     margin-left: 5px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 3px;
     font-weight: 500;
-    text-transform: uppercase;
 }
-
 .navbar .nav-link:hover {
     background-color: #eee;
     color: var(--main-color);
 }
-
 .navbar .navbar-toggler {
     box-shadow: none;
     font-size: 0.85rem;
