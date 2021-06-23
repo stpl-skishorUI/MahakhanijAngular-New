@@ -1,38 +1,8 @@
-.content-head h4, .content-head h4 strong {
+/* .content-head h4, .content-head h4 strong {
     font-size: 20px;
 }
-/* start css for theme accordion */
-.theme-accordion .accordion-body {
-    padding: 1rem 1.25rem 0;
-}
-.theme-accordion .accordion-item {
-    margin-bottom: 15px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.theme-accordion .accordion-button{
-    font-weight: 600;
-}
-.theme-accordion .accordion-button:not(.collapsed){
-    background-color: #ffffff;
-}
 
-.theme-accordion .accordion-item:hover {
-    box-shadow: 0 0 15px rgb(0 0 0 / 8%);
-    transition: all .3s ease-in-out;
-   
 
-}
-.theme-accordion .accordion-item:not(:first-of-type) {
-    border-top: 1px solid #00000020;
-}
-.theme-accordion .accordion-button:focus{
-    box-shadow:none
-}
-
-/* end css for theme accordion */
-
-/* start css for sidebar card */
 .card ul.nav-list>li>a {
     color: #666;
     padding: 8px 0 8px 28px;
@@ -59,11 +29,6 @@
     transform: translate3d(-1px,0,0);
     left: 12px;
 }
-/* start css for sidebar card */
-
-
-/* start css for about-gallery */
-
 #about-gallery  .nav-pills>li.nav-item {
     position: relative;
     z-index: 1;
@@ -122,7 +87,6 @@ blockquote.blockquote {
     color: #0d6efd;
 }
 
-/* contact pages css start here */
 .card-deck .card .card-body h6 {
     text-transform: uppercase;
     color: #2d6caf;
@@ -159,5 +123,68 @@ blockquote.blockquote {
     text-decoration: none;
     font-size: .8rem;
     font-weight: 600;
+} */
+
+#page-heading .card-img-overlay
+{
+    background-color:rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    border-radius: 0;
+    text-align: center;
 }
-/* contact pages css end here */
+#page-heading .card-img
+{
+    border-radius: 0;
+}
+#page-heading h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#page-heading .breadcrumb
+{
+    margin:0 auto;
+    display:inline-flex;
+    color: #fff;
+    font-size: 0.85rem;
+}
+#page-heading .breadcrumb .breadcrumb-item a
+{
+    color: var(--orange-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+#page-heading .breadcrumb .breadcrumb-item.active
+{
+    color: #fff;
+}
+.theme-accordion .accordion-body {
+    padding: 1rem 1.25rem 0;
+}
+.theme-accordion .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.theme-accordion .accordion-button{
+    font-weight: 600;
+}
+.theme-accordion .accordion-button:not(.collapsed){
+    background-color: #ffffff;
+}
+
+.theme-accordion .accordion-item:hover {
+    box-shadow: 0 0 15px rgb(0 0 0 / 8%);
+    transition: all .3s ease-in-out;
+   
+
+}
+.theme-accordion .accordion-item:not(:first-of-type) {
+    border-top: 1px solid #00000020;
+}
+.theme-accordion .accordion-button:focus{
+    box-shadow:none
+}

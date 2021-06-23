@@ -57,8 +57,9 @@
 }
 #ministers p.small{
     color: var(--link-color);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0;
+    font-size: 0.7rem;
 }
 #ministers h5.card-title
 {
