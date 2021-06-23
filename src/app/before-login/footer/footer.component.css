@@ -35,7 +35,7 @@
     }
 } */
 
-@media screen and (max-width: 1024px OR max-height: 620px) {
+@media screen and (max-width: 1024px) and (max-height: 620px) {
     #footer {
         position: fixed;
         width: 100%;
