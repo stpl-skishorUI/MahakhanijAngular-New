@@ -61,9 +61,10 @@
 .navbar{
     box-shadow: 0px 2px 3px #e7e7e7;
     padding-top: 0;
+    font-size: 0.85rem;
 }
 .navbar .dropdown-menu {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     padding:0;
 }
 .navbar .dropdown-menu .dropdown-item:hover,
