@@ -88,3 +88,49 @@
     font-size: 0.85rem;
     padding: 5px 6px;
 }
+@media (max-width: 1199.98px) {
+    .navbar .nav-link {
+        margin-left: 3px;
+    padding: 5px 10px;
+    }
+}
+@media (max-width: 991.98px) { 
+    .navbar-nav{
+        display: inline-block;
+    }
+    li.nav-item {
+        display: inline-block;
+        width: auto;
+    }
+    .navbar-nav .dropdown-menu{
+        position: absolute;
+        margin-top: -2px;
+    }
+}
+@media (max-width: 767.98px) {
+    li.nav-item {
+        display: inline-block;
+        width: 120px;
+    }
+}
+@media (max-width: 575.98px) {
+
+}
+@media (max-width: 399px) { 
+    .logo {
+        width: 170px;
+    padding-right: 5px;
+    margin-right: 5px;
+    }
+    .navbar .navbar-brand{
+        font-size: 1.1rem;
+        margin-right: 0;
+    }
+    .navbar .navbar-toggler {
+        font-size: 0.75rem;
+    padding: 3px 4px;
+    }
+    li.nav-item {
+        display: block;
+    }
+}
