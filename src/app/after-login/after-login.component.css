@@ -99,6 +99,22 @@ main {
 {
     margin-top: 6px;
 }
+/deep/ .filterbox .ngx-select__toggle,
+/deep/ .filterbox .ngx-select input,
+/deep/ .filterbox .ngx-select__toggle{
+    font-size: 0.8rem !important;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+/deep/ .filterbox .ngx-select__item,
+/deep/ .filterbox .ngx-select__clear{
+    font-size: 0.8rem !important;
+}
+/deep/ .filterbox .ngx-select__item_active{
+    background-color:var(--main-color);
+    color:#fff
+}
 
 table.fold-table {
     background: white;
