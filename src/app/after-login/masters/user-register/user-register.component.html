@@ -22,9 +22,11 @@
                 <div class="card-body filterbox">
                     <div class="row g-2">
                         <div class="col-sm-3">
-                            <select class="form-select">
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select State">
+                            </ngx-select>
+                            <!-- <select class="form-select">
                                 <option value="">Select State</option>
-                            </select>
+                            </select> -->
                         </div>
                         <div class="col-sm-3">
                             <select class="form-select">
