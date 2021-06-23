@@ -3,8 +3,8 @@
     background-repeat: no-repeat;
     background-position-y: 20px;
     background-position-x: 18px;
-    padding-bottom: 50px;
-    background-size: 53% auto;
+    /* padding-bottom: 50px; */
+    background-size: 56% auto;
 }
 #heading{
     padding: 20px 0;
@@ -114,3 +114,47 @@ backdrop-filter: blur( 5.5px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
+
+@media screen and (max-width: 1024px) {
+    #main-content {
+        background-image: url('/assets/images/OuterImages/maharashtra-bg_o.svg');
+        background-repeat: no-repeat;
+        background-position-y: 10px;
+        background-position-x: 18px;
+        /* padding-bottom: 50px; */
+        background-size: 87% auto;
+    }
+}
+@media screen and (max-width: 767px) {
+    div#stat-counts.border-bottom{
+        border-bottom: 0!important;
+    }
+    div#stat-counts .border-start{
+        border-left: 0!important;
+    }
+    div#stat-counts .border-end{
+        border-right: 0!important;
+    }
+    div#stat-counts .col-xl{
+        border-bottom: 1px solid #dee2e6!important;
+    }
+}
+@media screen and (max-width: 575px) {
+    #ministers .card
+    {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    #heading h4{
+        font-size: .85rem;
+        padding: 5px 5px;
+    }
+    div#stat-counts .col-xl-auto.border-end{
+        border-bottom: 1px solid #dee2e6!important;
+    }
+}
+
+
+
+
