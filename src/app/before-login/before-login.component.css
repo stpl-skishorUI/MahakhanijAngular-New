@@ -179,12 +179,33 @@ blockquote.blockquote {
 .theme-accordion .accordion-item:hover {
     box-shadow: 0 0 15px rgb(0 0 0 / 8%);
     transition: all .3s ease-in-out;
-   
-
 }
 .theme-accordion .accordion-item:not(:first-of-type) {
     border-top: 1px solid #00000020;
 }
 .theme-accordion .accordion-button:focus{
     box-shadow:none
+}
+#content-wrapper .sect-head h6 {
+    color: var(--link-color);
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+#content-wrapper p, #content-wrapper ul li, #content-wrapper ul li a, #content-wrapper .accordion-button{
+    font-size: .8rem;
+    line-height: 22px;
+}
+
+#content-wrapper .accordion-button{
+    padding: .5rem 1rem;
+}
+#content-wrapper .accordion-button:not(.collapsed) {
+    color: var(--link-color);
+}
+#content-wrapper .accordion-button::after{
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem;
 }
