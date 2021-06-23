@@ -47,7 +47,9 @@
     border-bottom: none;
     font-weight: 600;
 }
-
+#rightbox .alertbox{
+    border: none;
+}
 #rightbox .alertbox .card-header {
     background-color: transparent;
     font-size: 0.85rem;

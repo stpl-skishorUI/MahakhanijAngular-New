@@ -10,7 +10,8 @@
                 <div class="row g-2">
                     <div class="col-sm-auto">
                         <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-autoClose="false" type="button" id="ddlGeography" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-autoClose="false"
+                                type="button" id="ddlGeography" data-bs-toggle="dropdown" aria-expanded="false">
                                 Select Geography
                             </button>
                             <div class="dropdown-menu">
@@ -41,7 +42,8 @@
                     </div>
                     <div class="col-sm-auto">
                         <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-autoClose="false" type="button" id="ddlGeography" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-autoClose="false"
+                                type="button" id="ddlGeography" data-bs-toggle="dropdown" aria-expanded="false">
                                 Mineral Type
                             </button>
                             <div class="dropdown-menu">
@@ -50,19 +52,19 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="chkAll">
                                             <label class="form-check-label" for="chkAll">
-                                              All
+                                                All
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="chkStone">
                                             <label class="form-check-label" for="chkStone">
-                                              Stone
+                                                Stone
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="chkSoil">
                                             <label class="form-check-label" for="chkSoil">
-                                              Soil
+                                                Soil
                                             </label>
                                         </div>
                                     </div>
@@ -70,19 +72,19 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="chkSand">
                                             <label class="form-check-label" for="chkSand">
-                                              Sand
+                                                Sand
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="chkMurum">
                                             <label class="form-check-label" for="chkMurum">
-                                              Murum
+                                                Murum
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="chkOther">
                                             <label class="form-check-label" for="chkOther">
-                                              Other
+                                                Other
                                             </label>
                                         </div>
                                     </div>
@@ -91,7 +93,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <app-date-time-picker autocomplete="off" id="dashboardDateTimePicker" [selectedRange]="selectedRange" [config]="dateTimePickerConfig"></app-date-time-picker>
+                        <app-date-time-picker autocomplete="off" id="dashboardDateTimePicker"
+                            [selectedRange]="selectedRange" [config]="dateTimePickerConfig"></app-date-time-picker>
                     </div>
                 </div>
             </div>
@@ -323,7 +326,7 @@
         </div>
     </div>
 
-    <div class="row mt-2 gx-2">
+    <div class="row mt-3 gx-3">
         <div class="col-sm-6" id="mahamap">
             <div class="card">
                 <div class="card-header">
@@ -339,7 +342,9 @@
                         <div class="col-sm-12">
                             <div class="card card-body p-2" id="filters">
                                 <div class="input-group">
-                                    <app-date-time-picker autocomplete="off" id="dashboardMapDateTimePicker" [selectedRange]="selectedRange" [config]="dateTimePickerConfig"></app-date-time-picker>
+                                    <app-date-time-picker autocomplete="off" id="dashboardMapDateTimePicker"
+                                        [selectedRange]="selectedRange" [config]="dateTimePickerConfig">
+                                    </app-date-time-picker>
 
                                     <select class="form-select">
                                         <option>Mineral</option>
@@ -362,7 +367,7 @@
             </div>
         </div>
         <div class="col-sm-6" id="rightbox">
-            <div class="card mb-2">
+            <div class="card mb-3">
                 <div class="card-header">
                     Today's Alerts
                 </div>
@@ -384,7 +389,8 @@
                                         <div class="col-sm-12">
                                             <a href="#" class="alerts">
                                                 <div class="d-flex justify-content-between">
-                                                    <div class="al-label">Un-Allocated Plots <small>(By GPS)</small></div>
+                                                    <div class="al-label">Un-Allocated Plots <small>(By GPS)</small>
+                                                    </div>
                                                     <div class="text-end al-data">234</div>
                                                 </div>
                                             </a>
@@ -496,29 +502,33 @@
                 </div>
             </div>
 
-            <div class="card-group" id="dashcharts">
-                <div class="card">
-                    <div class="card-header">
-                        <button type="button" class="btn me-2"><i class="fas fa-arrow-left"></i></button>
-                        <button type="button" class="btn"><i class="fas fa-home"></i></button>
-                        <span class="float-end">
-                            Mineral-wise Lifting (Brass)
-                        </span>
-                    </div>
-                    <div class="card-body">
-                        <img src="#" class="card-img-top" alt="...">
+            <div class="row gx-2" id="dashcharts">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <button type="button" class="btn me-2"><i class="fas fa-arrow-left"></i></button>
+                            <button type="button" class="btn"><i class="fas fa-home"></i></button>
+                            <span class="float-end">
+                                Mineral-wise Lifting (Brass)
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <img src="#" class="card-img-top" alt="...">
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <button type="button" class="btn me-2"><i class="fas fa-arrow-left"></i></button>
-                        <button type="button" class="btn"><i class="fas fa-home"></i></button>
-                        <span class="float-end">
-                            Mineral-wise Lifting (Brass)
-                        </span>
-                    </div>
-                    <div class="card-body">
-                        <img src="#" class="card-img-top" alt="...">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <button type="button" class="btn me-2"><i class="fas fa-arrow-left"></i></button>
+                            <button type="button" class="btn"><i class="fas fa-home"></i></button>
+                            <span class="float-end">
+                                Mineral-wise Lifting (Brass)
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <img src="#" class="card-img-top" alt="...">
+                        </div>
                     </div>
                 </div>
             </div>
