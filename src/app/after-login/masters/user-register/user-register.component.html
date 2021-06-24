@@ -29,19 +29,16 @@
                             </select> -->
                         </div>
                         <div class="col-sm-3">
-                            <select class="form-select">
-                                <option value="">Select Division</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select Division">
+                            </ngx-select>
                         </div>
                         <div class="col-sm-3">
-                            <select class="form-select">
-                                <option value="">Select District</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select District">
+                            </ngx-select>
                         </div>
                         <div class="col-sm-3">
-                            <select class="form-select">
-                                <option value="">Select Taluka</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select Taluka">
+                            </ngx-select>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-check form-check-inline">
@@ -151,21 +148,21 @@
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
                 </ul>
-              </nav>
+            </nav>
         </div>
         <div class="col-sm-4" id="formcontainer">
             <div class="card">
@@ -176,114 +173,108 @@
                     <div class="mb-2 row g-0">
                         <label for="ddlUserType" class="col-sm-4 col-form-label">User Type</label>
                         <div class="col-sm-8">
-                          <select class="form-select" id="ddlUserType">
-                              <option value="">Select User Type</option>
-                          </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select User Type">
+                            </ngx-select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="ddlSubUserType" class="col-sm-4 col-form-label">Sub User Type</label>
                         <div class="col-sm-8">
-                            <select class="form-select" id="ddlSubUserType">
-                                <option value="">Select User Type</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select Sub User Type">
+                            </ngx-select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="ddlState" class="col-sm-4 col-form-label">State</label>
                         <div class="col-sm-8">
-                            <select class="form-select" id="ddlState">
-                                <option value="">State</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select State">
+                            </ngx-select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="ddlDivision" class="col-sm-4 col-form-label">Division</label>
                         <div class="col-sm-8">
-                            <select class="form-select" id="ddlDivision">
-                                <option value="">Division</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select Division">
+                            </ngx-select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="ddlDistrict" class="col-sm-4 col-form-label">District</label>
                         <div class="col-sm-8">
-                            <select class="form-select" id="ddlDistrict">
-                                <option value="">Select User Type</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select District">
+                            </ngx-select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="lstTaluka" class="col-sm-4 col-form-label">Taluka</label>
                         <div class="col-sm-8">
                             <select class="form-select" multiple id="lstTaluka">
-                                <option value="">Select User Type</option>
+                                <option value="">Select Taluka</option>
                             </select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtVillageTown" class="col-sm-4 col-form-label">Village/Town</label>
                         <div class="col-sm-8">
                             <input type="text" id="txtVillageTown" class="form-control" placeholder="Village/Town (Optional)">
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtName" class="col-sm-4 col-form-label">Name</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="txtName" placeholder="Name">
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtMobileNo" class="col-sm-4 col-form-label">Mobile No.</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="txtMobileNo" placeholder="Mobile No.">
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtUserName" class="col-sm-4 col-form-label">User Name</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="txtUserName" placeholder="User Name">
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="ddlDesignation" class="col-sm-4 col-form-label">Designation</label>
                         <div class="col-sm-8">
-                            <select class="form-select" id="ddlDesignation">
-                                <option value="">Select User Type</option>
-                            </select>
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select Designation">
+                            </ngx-select>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtDesignationName" class="col-sm-4 col-form-label">Designation Name</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="txtDesignationName" placeholder="Designation Name">
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtAddress" class="col-sm-4 col-form-label">Address</label>
                         <div class="col-sm-8">
                             <textarea class="form-control" id="txtAddress" rows="3" placeholder="Address"></textarea>
                         </div>
-                      </div>
-                      <div class="mb-2 row g-0">
+                    </div>
+                    <div class="mb-2 row g-0">
                         <label for="txtEmailID" class="col-sm-4 col-form-label">Email ID</label>
                         <div class="col-sm-8">
                             <input type="email" class="form-control" id="txtEmailID" placeholder="Email ID">
                         </div>
-                      </div>
-                      <div class="row g-0">
+                    </div>
+                    <div class="row g-0">
                         <label for="txtEmailID" class="col-sm-4 col-form-label">Block/Unblock</label>
                         <div class="col-sm-8">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="rblBlockUnblock" id="rblBlock" value="Block">
                                 <label class="form-check-label" for="rblBlock">Block</label>
-                              </div>
-                              <div class="form-check form-check-inline">
+                            </div>
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="rblBlockUnblock" id="rblUnblock" value="Unblock">
                                 <label class="form-check-label" for="rblUnblock">Unblock</label>
-                              </div>
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
