@@ -11,7 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     declarations: [
         AfterLoginComponent,
         HeaderComponent,
-        SidebarComponent,
+        SidebarComponent
     ],
     providers: [],
     exports: [

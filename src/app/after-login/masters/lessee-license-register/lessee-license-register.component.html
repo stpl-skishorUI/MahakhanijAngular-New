@@ -1,0 +1,214 @@
+<div id="buttonbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <a class="navbar-brand">
+                    Masters > Lessee License Registration
+                </a>
+            </div>
+            <div class="col-sm-8 text-end">
+                <button class="btn btn-edit me-2" type="button"><i class="far fa-edit me-2"></i>Edit</button>
+                <button class="btn btn-clear me-2" type="button"><i class="fas fa-times me-2"></i>Clear</button>
+                <button class="btn btn-main" type="button"><i class="fas fa-upload me-2"></i>Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="card mb-2">
+                <div class="card-body filterbox">
+                    <div class="row g-2">
+                        <div class="col-sm-4">
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="All Lessee / Licency Type">
+                            </ngx-select>
+                        </div>
+                        <div class="col-sm-4">
+                            <ngx-select [allowClear]="true" [items]="items" placeholder="Select District">
+                            </ngx-select>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Name/Mobile No./PAN No.">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <span class="input-group-text">Details Completed :</span>
+                                <select class="form-select rounded">
+                                    <option value="All">All</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 text-end">
+                            <button class="btn btn-secondary" type="button" id="btnApply">
+                                <i class="fas fa-search me-2"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table dash-table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Mobile No.</th>
+                        <th>PAN No.</th>
+                        <th>District</th>
+                        <th>Address</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>A B BUILDER AND DEVELOPERS PRIVATE LIMITED</td>
+                        <td>9821034366</td>
+                        <td>-</td>
+                        <td>MumbaiSuburban</td>
+                        <td>SHOP NO.GR-4,SHOPPING ARCADE CO-OP.,PREM SOCIETY,KANDIVALI WEST.MUMBAI.</td>
+                        <td><i class="fas fa-circle text-danger"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-5" id="formcontainer">
+            <div class="card">
+                <div class="card-header">
+                    Lessee License Registration
+                </div>
+                <div class="card-body">
+                    <div class="row g-0 mb-2">
+                        <label for="rblApplicantType" class="col-sm-4 col-form-label">Applicant Type</label>
+                        <div class="col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rblApplicantType" id="rblIndividual" value="Individual" [(ngModel)]="selectedApplicationType">
+                                <label class="form-check-label" for="rblIndividual">Individual</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rblApplicantType" id="rblOrganization" value="Organization" [(ngModel)]="selectedApplicationType">
+                                <label class="form-check-label" for="rblOrganization">Organization</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0">
+                        <label for="ddlDistrict" class="col-sm-4 col-form-label">District</label>
+                        <div class="col-sm-8">
+                            <ngx-select [allowClear]="true" id="ddlDistrict" [items]="items" placeholder="Select District">
+                            </ngx-select>
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0">
+                        <label for="txtName" class="col-sm-4 col-form-label">Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtName" class="form-control" [placeholder]="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL ? 'Lessee / License Name' : 'Organization Name'">
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0">
+                        <label for="txtMobileNo" class="col-sm-4 col-form-label">Mobile No.</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtMobileNo" class="form-control" [placeholder]="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL ? 'Mobile No.' : 'Organization Mobile No.'">
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0">
+                        <label for="txtAddress" class="col-sm-4 col-form-label">Address</label>
+                        <div class="col-sm-8">
+                            <textarea id="txtAddress" rows="2" class="form-control" [placeholder]="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL ? 'Lessee License Address' : 'Organization Address'"></textarea>
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0">
+                        <label for="txtEmailID" class="col-sm-4 col-form-label">Email ID</label>
+                        <div class="col-sm-8">
+                            <input type="email" id="txtEmailID" class="form-control" placeholder="Email ID">
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                        <label for="txtLandlineNo" class="col-sm-4 col-form-label">Landline No</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtLandlineNo" class="form-control" placeholder="Landline No">
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.ORGANIZATION">
+                        <label for="ddlOrganizationType" class="col-sm-4 col-form-label">Organization Type</label>
+                        <div class="col-sm-8">
+                            <ngx-select [allowClear]="true" id="ddlOrganizationType" [items]="items" placeholder="Select Organization Type">
+                            </ngx-select>
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.ORGANIZATION">
+                        <label for="txtContactPersonName" class="col-sm-4 col-form-label">Contact Person Name</label>
+                        <div class="col-sm-8">
+                            <input type="email" id="txtContactPersonName" class="form-control" placeholder="Contact Person Name">
+                        </div>
+                    </div>
+                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.ORGANIZATION">
+                        <label for="txtContactPersonNo" class="col-sm-4 col-form-label">Contact Person No</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtContactPersonNo" class="form-control" placeholder="Contact Person No">
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <label for="txtEmailID" class="col-sm-4 col-form-label">Details Completed</label>
+                        <div class="col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rblDetails" id="rblYes" value="Yes">
+                                <label class="form-check-label" for="rblYes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rblDetails" id="rblNo" value="No">
+                                <label class="form-check-label" for="rblNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table dash-table table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Document Name</th>
+                                <th>Document Number</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Profile Photo</td>
+                                <td></td>
+                                <td>button</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PAN<br>
+                                    <small class="form-text">(PAN no. & PAN document mandatory)</small>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

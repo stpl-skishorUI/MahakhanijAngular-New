@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserRegisterComponent } from './user-register.component';
+import { LesseeLicenseRegisterComponent } from './lessee-license-register.component';
 const routes: Routes = [
-    { path: '', component:UserRegisterComponent  }
+    { path: '', component:LesseeLicenseRegisterComponent  }
 ]
 
 @NgModule({
@@ -11,4 +11,4 @@ const routes: Routes = [
     ]
 })
 
-export class UserRegisterRoutingModule { }
+export class LesseeLicenseRegisterRoutingModule { }
