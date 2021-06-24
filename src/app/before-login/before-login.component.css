@@ -193,7 +193,12 @@ blockquote.blockquote {
     font-weight: 600;
     margin-bottom: 15px;
 }
-#content-wrapper p, #content-wrapper ul li, #content-wrapper ul li a, #content-wrapper .accordion-button{
+#content-wrapper p, 
+#content-wrapper ul li, 
+#content-wrapper ul li a, 
+#content-wrapper .accordion-button, 
+#about-gallery #price, 
+#content-wrapper ol li{
     font-size: .8rem;
     line-height: 22px;
 }
@@ -208,4 +213,50 @@ blockquote.blockquote {
     width: 1rem;
     height: 1rem;
     background-size: 1rem;
+}
+#content-wrapper-sidebar .card-header {
+    background: var(--link-color);
+    color: #fff;
+    font-size: .8rem;
+    line-height: 15px;
+    font-weight: 600;
+}
+#content-wrapper-sidebar .nav-link {
+    color: #434343;
+    background: #00a3e900;
+}
+#content-wrapper-sidebar .nav-link.active, 
+#content-wrapper-sidebar .nav-link:hover{
+    color: var(--link-color);
+    background: #afe7ff0f;
+}
+#about-gallery  .nav-pills>li.nav-item {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    border: 1px solid;
+    border-color: #ededed!important;
+}
+#about-gallery .nav-pills>li.nav-item>button.nav-link {
+    border-bottom: none;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    padding: 16px 50px;
+    text-transform: uppercase;
+    z-index: 1;
+    color: var(--link-color);
+}
+#about-gallery .nav-pills .nav-link.active, 
+#about-gallery .nav-pills .show>.nav-link{
+    color: #fff!important;
+    background-color: var(--link-color);
+}
+
+#about-gallery #about h6{
+    color: #00a2e9;
+    font-weight: 600; 
+    font-size: .85rem;
+    margin-bottom: 5px;
 }
