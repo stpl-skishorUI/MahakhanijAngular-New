@@ -1,16 +1,30 @@
-<div class="top-image mb-4">
-    <img src="../../../../assets/images/mining.jpg" class="img-fluid" alt="System Overview Banner" />
-  </div>
-  <div class="row" id="sys-overview">
-    <div class="col-lg-9 mb-5">
-      <div class="content-head" id="lblGR">
-        <h4 class="mb-3 fw-normal">Frequently Asked <strong class="fw-bold"> Questions</strong> </h4>
+<div class="row">
+  <div class="col-sm-12" id="page-heading">
+    <div class="card mb-3">
+      <img src="../../../../assets/images/mining.jpg" class="card-img" alt="Frequently Asked Questions" />
+      <div class="card-img-overlay">
+        <div>
+          <h2>Frequently Asked Questions</h2>
+          <div aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Help</a></li>
+              <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+            </ol>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="row" id="content-wrapper">
+    <div class="col-lg-9 mb-5">
       <div class="sect-head" id="lblsoverSubHead1">
-        <h6 class="fw-bold">Working of the System</h6>
+        <h6 class="">Working of the System</h6>
       </div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="price">
             <div class="input-group mb-3">
                 <input type="text" id="txtSearch" class="form-control" placeholder="Describe your Issue">
                 <button type="submit" class="btn btn-dark "><i class="fas fa-search "></i></button>
@@ -190,16 +204,16 @@
   
     </div>
     <div class="col-lg-3 d-none d-md-none d-lg-block">
-      <div class="card">
-        <div class="card-header bg-primary text-light text-uppercase small ">
+      <div class="card rounded-0"  id="content-wrapper-sidebar">
+        <div class="card-header text-uppercase rounded-0">
             Help
         </div>
         <ul class="nav nav-list flex-column">
          
-          <li class="nav-item">
+          <li class="nav-item  border-bottom">
             <a routerLink="/" class="nav-link " id="lblrtGrievance">Grievance</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item border-bottom">
             <a routerLink="/faq" class="nav-link active" id="lblrtFAQ">Frequently Asked Questions</a>
           </li>
           <li class="nav-item">

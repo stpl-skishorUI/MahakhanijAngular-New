@@ -161,8 +161,9 @@ blockquote.blockquote {
 {
     color: #fff;
 }
-.theme-accordion .accordion-body {
-    padding: 1rem 1.25rem 0;
+.theme-accordion .accordion-body .theme-ul,
+.theme-accordion .accordion-body p:last-child{
+    margin-bottom: 0;
 }
 .theme-accordion .accordion-item {
     margin-bottom: 15px;
@@ -184,7 +185,7 @@ blockquote.blockquote {
     border-top: 1px solid #00000020;
 }
 .theme-accordion .accordion-button:focus{
-    box-shadow:none
+     box-shadow:inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
 #content-wrapper .sect-head h6 {
     color: var(--link-color);
@@ -193,7 +194,19 @@ blockquote.blockquote {
     font-weight: 600;
     margin-bottom: 15px;
 }
-#content-wrapper p, #content-wrapper ul li, #content-wrapper ul li a, #content-wrapper .accordion-button{
+#content-wrapper p, 
+#content-wrapper span, 
+#content-wrapper ul li, 
+#content-wrapper ul li a, 
+#content-wrapper .accordion-button, 
+#about-gallery #price, 
+#content-wrapper #price,
+#content-wrapper #price .btn, 
+#content-wrapper #price .form-control, 
+#content-wrapper #price .input-group-text,
+.card-deck .card .card-body p,
+.card-deck .card-body a,
+#content-wrapper ol li{
     font-size: .8rem;
     line-height: 22px;
 }
@@ -209,3 +222,114 @@ blockquote.blockquote {
     height: 1rem;
     background-size: 1rem;
 }
+#content-wrapper-sidebar .card-header {
+    background: var(--link-color);
+    color: #fff;
+    font-size: .8rem;
+    line-height: 15px;
+    font-weight: 600;
+}
+#content-wrapper-sidebar .nav-link {
+    color: #434343;
+    background: #00a3e900;
+}
+#content-wrapper-sidebar .nav-link.active, 
+#content-wrapper-sidebar .nav-link:hover{
+    color: var(--link-color);
+    background: #afe7ff0f;
+}
+#about-gallery  .nav-pills>li.nav-item {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    border: 1px solid;
+    border-color: #ededed!important;
+}
+#about-gallery .nav-pills>li.nav-item>button.nav-link {
+    border-bottom: none;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    padding: 16px 50px;
+    text-transform: uppercase;
+    z-index: 1;
+    color: var(--link-color);
+}
+#about-gallery .nav-pills .nav-link.active, 
+#about-gallery .nav-pills .show>.nav-link{
+    color: #fff!important;
+    background-color: var(--link-color);
+}
+
+#about-gallery #about h6{
+    color: #00a2e9;
+    font-weight: 600; 
+    font-size: .85rem;
+    margin-bottom: 5px;
+}
+#content-wrapper #price .form-control{
+    position: relative;
+    text-align: left!important;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: none;
+    line-height: 1.5;
+}
+#content-wrapper table thead tr th {
+    color: #000;
+    font-weight: 500;
+}
+.pagination {
+    font-size: 0.75rem;
+}
+.pagination .page-link {
+    color: #333;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--main-color) !important;
+    color: #fff !important;
+}
+
+.card-deck .card .card-body h6 {
+    text-transform: uppercase;
+    color: var(--link-color);
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    margin-top: 25px;
+    
+}
+.card-deck .card .card-body  {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffffed 50%,#ffffffe0 69%,#ffffffde 100%), url(../../assets/images/logo2.webp);
+    background-position-y: 1px;
+    background-size: 85px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.card-deck .card  {
+    padding: 5px;
+}
+.card-deck .card-body p i {
+    color: white;
+    padding: 2px 7px;
+    width: 24px;
+    height: 24px;
+    background: var(--link-color);
+    margin-right: 5px;
+    font-size: 12px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+}
+.card-deck .card-body a {
+    color: #6c757d!important;
+    text-decoration: none;
+    /* font-size: .8rem; */
+    /* font-weight: 600; */
+} 
