@@ -223,7 +223,7 @@ blockquote.blockquote {
     background-size: 1rem;
 }
 #content-wrapper-sidebar .card-header {
-    background: var(--link-color);
+    background: #6c757d!important;
     color: #fff;
     font-size: .8rem;
     line-height: 15px;
@@ -235,8 +235,8 @@ blockquote.blockquote {
 }
 #content-wrapper-sidebar .nav-link.active, 
 #content-wrapper-sidebar .nav-link:hover{
-    color: var(--link-color);
-    background: #afe7ff0f;
+    color: #000000;
+    background: #9696960f;
 }
 #about-gallery  .nav-pills>li.nav-item {
     position: relative;
@@ -301,7 +301,7 @@ blockquote.blockquote {
     color: var(--link-color);
     letter-spacing: 0.5px;
     font-size: 14px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     
 }
 .card-deck .card .card-body  {
@@ -314,17 +314,22 @@ blockquote.blockquote {
 .card-deck .card  {
     padding: 5px;
 }
+.card-deck .card-body p,
+.card-deck .card-body span,
+.card-deck .card-body span a{
+    line-height: 18px!important;
+}
 .card-deck .card-body p i {
     color: white;
-    padding: 2px 7px;
-    width: 24px;
-    height: 24px;
-    background: var(--link-color);
+    padding: 2px 5.5px;
+    width: 20px;
+    height: 20px;
+    background: #6c757d;
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 10px;
     border-radius: 50%;
     text-align: center;
-    line-height: 20px;
+    line-height: 16px;
     display: inline-block;
 }
 .card-deck .card-body a {
