@@ -268,6 +268,27 @@ table.fold-table>tbody>tr.fold.open {
     outline: none;
 }
 
+#formcontainer label.file-upload {
+    position: relative;
+    overflow: hidden;
+    font-size: 0.75rem;
+}
+
+#formcontainer input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
 #formcontainer .form-check {
     margin-top: 5px;
 }
