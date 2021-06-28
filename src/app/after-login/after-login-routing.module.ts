@@ -8,6 +8,7 @@ const routes: Routes = [
     {path:'dashboard',  loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)},
     {path:'user-register',  loadChildren: () => import('./masters/user-register/user-register.module').then(m => m.UserRegisterModule)},
     {path:'lessee-license-register',  loadChildren: () => import('./masters/lessee-license-register/lessee-license-register.module').then(m => m.LesseeLicenseRegisterModule)},
+    {path:'quarry-register',  loadChildren: () => import('./masters/quarry-register/quarry-register.module').then(m => m.QuarryRegisterModule)},
 ];
 
 @NgModule({

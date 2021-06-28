@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
         AfterLoginComponent,
         HeaderComponent,
         SidebarComponent
+        
     ],
     providers: [],
     exports: [
