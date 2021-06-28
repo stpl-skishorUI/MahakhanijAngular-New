@@ -16,11 +16,12 @@ import { FaqComponent } from './help/faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { NoticeDetailsComponent } from './eauction/notice-details/notice-details.component';
 import { ScreenReaderAccessComponent } from './screen-reader-access/screen-reader-access.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
     imports: [
         CommonModule,
-        BeforeLoginRoutingModule
+        BeforeLoginRoutingModule,
+        FormsModule
     ],
     declarations: [
         BeforeLoginComponent,

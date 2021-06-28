@@ -19,9 +19,8 @@
 
 
 
-<div class="row" id="content-wrapper">
-  <div class="col-lg-9 mb-5">
-    
+<div class="row application" id="content-wrapper">
+  <div class="col-lg-9 mb-5" >
     <div class="row">
       <div class="col-md-12">
         <div class="card mb-3">
@@ -37,11 +36,11 @@
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-lg">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="helptextLabel">Interstate Mineral Transport</h5>
+                    <div class="modal-header py-2 bg-light">
+                      <h6 class="modal-title" id="helptextLabel">Interstate Mineral Transport</h6>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body" id="helptext">
+                    <div class="modal-body py-2" id="helptext">
                       <p id="lblIMTModalPara1">In order to make the natural resources available in developing areas, the
                         transfer of minerals from one state to another is a common sight in India. However, the rules
                         and regulations for transport of minerals and collection charges vary from state to state. As
@@ -151,7 +150,7 @@
                         mobile phone to show mineral monitor officers).</p>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-sm btn-secondary m-0" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
@@ -162,6 +161,226 @@
       </div>
     </div>
     <div class="row">
+        <div class="col-sm-12" id="formcontainer">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Preliem Info
+                    <span class="float-end small text-danger">* marked fields are mandetory.</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row" id="OwnerDiv">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label for="rblApplicantType" class="col-md-4 col-form-label" id="lblOwnerTypeTP">Owner Type:</label>
+                                        <div class="col-md-8">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rblApplicantType" id="rblIndividual" value="Individual"  [(ngModel)]="selectedApplicationType">
+                                                <label class="form-check-label" for="rblIndividual" id="">Individual</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rblApplicantType" id="rblOrganization" value="Organization" [(ngModel)]="selectedApplicationType">
+                                                <label class="form-check-label" for="rblOrganization" id="">Organization</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label for="VerfiyBy" class="col-md-4 col-form-label" id="lblVerfiyByTP">Verify By:</label>
+                                        <div class="col-md-8">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" data-entry="VerfiyBy" onclick="FN_VerfiyBy(true)" name="VerfiyBy" id="VerfiyBy1" value="mobile" checked>
+                                                <label class="form-check-label" for="VerfiyBy1" id="lblMobileTP">Mobile</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" data-entry="VerfiyBy" onclick="FN_VerfiyBy(false)" name="VerfiyBy" id="VerfiyBy2" value="pan">
+                                                <label class="form-check-label" for="VerfiyBy2" id="lblPANTP1">PAN</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row g-0">
+                                <label for="txtName" class="col-sm-4 col-form-label">Mobile No.<span class="text-danger ms-1">*</span></label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="txtMobileNo" class="form-control" [placeholder]="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL ? 'Mobile No.' : 'Organization Mobile No.'">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 d-none" id="isMobileTP">
+                            <div class="form-group row mb-0" id="btnMobileTpDiv">
+                                <div class="col-md-4">
+                                    <label for="txtMobileTP" class="col-form-label"><span id="lblMobileNoExTP">Mobile No.</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+                                </div>
+                                <div class="col-md-8 pl-1">
+                                    <!-- <div class="col-sm-8">
+                                        <input type="text" id="txtName" class="form-control" [placeholder]="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL ? 'Lessee / License Name' : 'Organization Name'">
+                                    </div> -->
+                                    <div class="input-group">
+                                        <input type="text" id="txtMobileTP" data-entry="txtMobileTP" class="form-control" [placeholder]="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL ? 'Applicant Mobile No.' : 'Org. Mobile No.'">
+
+                                        <!-- <input type="text" id="txtMobileTP"  onkeyup="MobileNoOrPanTxtChange(0)" class="form-control validate-number validate-length validate-min-length" minlength="10" maxlength="10" length="10" placeholder="Applicant Mobile No." autocomplete="off"> -->
+                                            <button type="button" class="btn btn-success border-0 " id="btnMobileTp" onclick="onVerifyExisting(0, this, 'btnMobileTp')">Search</button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7 pr-0">
+                                            <div id="btnMobileTpSuccessMsg" class="text-sucess d-none"></div>
+                                        </div>
+                                        <div class="col-md-5 pl-0 text-right">
+                                            <div class="btnMobileTptimerContainer d-none" >Time left: <span id="btnMobileTptimer"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 hide d-none" id="isPanTP">
+                            <div class="form-group row mb-0" id="btnPanTpDiv">
+                                <div class="col-md-4">
+                                    <label for="PanTxtTP2" class="col-form-label"><span id="lblPanExTP">PAN</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup></label>
+                                </div>
+                                <div class="col-md-8 pl-1">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control text-uppercase validate-alphanumeric" onkeyup="MobileNoOrPanTxtChange(1)" data-required="bs" maxlength="10" length="10" id="PanTxtTP2" onblur="onBlurPan(this)" placeholder="PAN Number" data-entry="PanTxt" />
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-sm btn-success border-0 mt-1" id="btnPanTp" onclick="onVerifyExisting(1, this, 'btnPanTp')">Search</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 pr-0">
+                                            <div id="btnPanTpSuccessMsg"  class="text-sucess d-none"></div>
+                                        </div>
+                                        <div class="col-md-4 pl-0 text-right">
+                                            <div class="btnPanTptimerContainer d-none" >Time left: <span id="btnPanTptimer"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hide d-none" id="isVerifyOtpTP">
+                            <div class="form-group row mb-0">
+                                <label for="txtOTPtp" class="col-md-5 col-form-label requiredlabel">
+                                    <span id="lblEnterOTPTP">Verify OTP</span>:<sup class=""><span class="fa fa-asterisk small text-danger"></span></sup>
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control validate-number validate-min-length" data-required="bs" minlength="5" maxlength="5" length="5" id="txtOTPtp" placeholder="OTP" autocomplete="off">
+                                        <button type="button" class="btn  btn-success border-0" onclick="onVerifyOtpTp()">Verify</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">
+                    Applicant Details
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row" id="applicationDiv">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label for="OwnerType" class="col-md-4 col-form-label" id="lblOwnerTypeTP">Owner Type:</label>
+                                        <div class="col-md-8">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rblApplicantType" id="rblIndividual" value="Individual"  [(ngModel)]="selectedApplicationType">
+                                                <label class="form-check-label" for="rblIndividual" id="">Individual</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rblApplicantType" id="rblOrganization" value="Organization" [(ngModel)]="selectedApplicationType">
+                                                <label class="form-check-label" for="rblOrganization" id="">Organization</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="Applicant Name">
+                                        <label for="floatingInput">Applicant Name</label>
+                                      </div>
+                                    <!-- <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant Name<span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="txtName" class="form-control" placeholder="Applicant Name">
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant Address<span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="txtName" class="form-control" placeholder="Applicant Address">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant Mobile No.<span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="txtName" class="form-control" placeholder="Applicant Mobile No.">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant Landline No.<span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="txtName" class="form-control" placeholder="Applicant Landline No.">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant Email  <span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="email" id="txtName" class="form-control" placeholder="Applicant Email Id">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant State  <span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="email" id="txtName" class="form-control" placeholder="Applicant State">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2 row g-0" *ngIf="selectedApplicationType == APPLICATION_TYPE.INDIVIDUAL">
+                                        <label for="txtName" class="col-sm-4 col-form-label">Applicant District  <span class="text-danger ms-1">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="email" id="txtName" class="form-control" placeholder="Applicant District">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            
+                                
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <!-- <div class="row">
         <div class="col-lg-12">
             <div class="row" id="OwnerDiv">
                 <div class="col-md-8">
@@ -255,7 +474,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row hide" id="alertExistingApplicantDiv">
         <div class="col-md-12 mt-3">
             <div class="alert alert-warning" role="alert" id="alertExistingApplicant"></div>
@@ -384,7 +603,7 @@
         </div>
         <div class="col-md-12">
             <table class="table table-borderless">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
                         <th >Document Name</th>
                         <th >Document Number</th>
